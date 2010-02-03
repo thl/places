@@ -25,3 +25,9 @@
 [submodule "vendor/plugins/kmaps_integration"]
 	path = vendor/plugins/kmaps_integration
 	url = git://github.com/thl/kmaps_integration.git
+[submodule "vendor/plugins/places_engine"]
+	path = vendor/plugins/places_engine
+	url = git://github.com/thl/places_engine.git
+[submodule "vendor/plugins/thl_integration"]
+	path = vendor/plugins/thl_integration
+	url = git://github.com/thl/thl_integration.git
