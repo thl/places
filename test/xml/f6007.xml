@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE feature SYSTEM "http://www.thdl.org/collections/cultgeo/gazetteer2/gaz-dtd/gazetteer.dtd">  <feature id="f6007">
+    <fheader><fclass term="autonomous prefecture" type="administrative"/></fheader>
+    <fname lang="tib" resp="THDL" isCurrent="yes">
+        <geogname>རྔ་བ།</geogname>
+        <authority>AMI98</authority>
+        <transliteration type="orthographic" scheme="thdl.ext.wyl" isCurrent="yes">
+            <geogname>rnga ba</geogname>
+        </transliteration>
+      </fname>  
+        <!--enter the chinese  transliteration which will have altspells-->
+
+    <fname lang="chi.simplified" resp="THDL" isCurrent="yes">
+            <geogname>阿坝藏族羌族自治州</geogname>
+            <authority id="au1">GB90_CIE_NJS</authority>
+              <altspell  type="chi.traditional" resp="THDL" isCurrent="yes">
+                <geogname>阿壩藏族羌族自治州</geogname>
+                <authority>GB90_CIESEN</authority>
+                <ref idref="tr1"/>
+            </altspell>
+            <transliteration id="tr1" type="phonetic" scheme="pinyin" resp="THDL" isCurrent="yes">
+                <geogname>Aba Zangzu Qiangzu zizhizhou</geogname>
+            </transliteration>
+
+        <transliteration type="phonetic" scheme="chinese.romanized.tibetan" resp="THDL" isCurrent="yes">
+            <geogname>Aba Zangzu Qiangzu zizhizhou</geogname>
+            <authority>GB90_CIESEN</authority>
+        </transliteration>
+    </fname>
+    <place>
+        <geometry projection="geographic">
+            <point>
+                <lat units="signed decimal degrees">to be derived from center point</lat>
+                <long units="signed decimal degrees">to be derived from center point</long>
+            </point>
+            <measurement>
+                <authority>authority tbd</authority>
+                <accuracy>
+                    <p>accuracy tbd</p>
+                </accuracy>
+            </measurement>
+        </geometry>
+    </place>
+    <frel role="partof">
+        <time>
+            <date era="ad">1990</date>
+            <authority>1990 Census</authority>
+        </time>
+        <extref href="f1159"/>
+    </frel>
+</feature>

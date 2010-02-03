@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE feature SYSTEM "http://www.thdl.org/collections/cultgeo/gazetteer2/gaz-dtd/gazetteer.dtd">
+
+<feature id="f37">
+    <fheader>
+        <fclass term="neighborhood committee" type="administrative"/>
+    </fheader>
+    <fname lang="tib">
+        <geogname>(unknown)</geogname>
+        <authority>THDL</authority>
+        <transliteration id="tr1" type="orthographic" scheme="tib-wylie" resp="THDL">
+            <geogname>(unknown)</geogname>
+        </transliteration>
+    </fname>
+        <fname lang="chi.simplified" resp="CHGIS" type="unspecified">
+            <geogname>鲁吉</geogname>
+            <authority>90Census</authority>
+            <transliteration id="tr2" scheme="pinyin" resp="CHGIS" type="phonetic">
+                <geogname>Luji</geogname>
+            </transliteration>
+        </fname>
+        <fname lang="chi.traditional" resp="CHGIS" type="unspecified">
+            <geogname>魯吉</geogname>
+            <authority>90Census</authority>
+            <transliteration id="tr3" scheme="pinyin" resp="CHGIS" type="phonetic">
+                <geogname>Luji</geogname>
+            </transliteration>
+        </fname>
+
+    <place>
+        <geometry projection="geographic">
+            <point>
+                <lat units="signed decimal degrees">29.234</lat>
+                <long units="signed decimal degrees">91.480</long>
+            </point>
+            <measurement>
+                <authority>Lhasa Chengguan Map</authority>
+            </measurement>
+        </geometry>
+    </place>
+    <frel role="partof">
+        <extref href="f31"/>
+    </frel>
+</feature>

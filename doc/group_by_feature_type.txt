@@ -1,0 +1,24 @@
+8 July 2008:
+
+Features have Feature Type and Related Features should be grouped according to this type.  The request is that grouped features provide a summary count for its feature type which, upon clicking, would expand to display the grouped features.
+
+For example:
+
+Feature A
+ Related Features:
+  Monasteries (2)
+   Monastery 1
+   Monastery 2
+  Churches (2)
+  Buildings (3)
+  
+  
+Items to research:
+ - grouping by feature type
+ - sorting by feature type
+ - counting feature type
+ - div hiding/showing
+
+
+A features children and descendants will be different sizes but if a feature has no children then it also has no descendants [confirmed by matt mitchell].
+

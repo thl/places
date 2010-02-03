@@ -1,0 +1,80 @@
+ActsAsFamilyTree is a Rails plugin that gives your ActiveRecord methods and associations useful for a family tree type model.
+
+#
+# Example Migrations
+#
+
+# Node relation table:
+def self.up
+	create_table :category_relations do |t|
+		t.integer :child_node_id
+		t.integer :parent_node_id
+		t.string :ancestor_ids
+		t.text :notes
+		t.timestamps
+	end
+end
+
+def self.down
+	drop_table :category_relations
+end
+
+# Node table:
+def self.up
+	create_table :categories do |t|
+	  t.string :name
+	  t.text :description
+	  t.string :ancestor_ids
+	  t.timestamps
+	end
+end
+
+def self.down
+	drop_table :categories
+end
+
+#
+# Example Models
+#
+
+# The relation model
+class CategoryRelation < ActiveRecord::Base
+
+  acts_as_family_tree :tree, :node_class=>'Category'
+
+end
+
+# The node model
+class Category < ActiveRecord::Base
+
+  acts_as_family_tree :node, :tree_class=>'CategoryRelation'
+
+end
+
+#
+# Example usage:
+#
+
+Category.roots
+CategoryRelation.roots
+
+Category.find(:first).ancestors
+Category.find(:first).descendants
+CategoryRelation.find(:first).ancestors
+CategoryRelation.find(:first).descendants
+
+Category.find(:first).parents
+Category.find(:first).children
+CategoryRelation.find(:first).parents
+CategoryRelation.find(:first).children
+
+Category.find(:first).siblings
+CategoryRelation.find(:first).siblings
+
+You can pass the usual finder arguments to each of those methods, for example:
+Category.find(:first).ancestors(:conditions=>['is_active = ?', true])
+
+NOTE: The use of the ancestors and descendants methods require that the "ancestor_ids" fields get updated. This is handled by a post save hook. To initialize the ancestor_id, you can do:
+
+Category.reset_ancestor_ids
+CategoryRelation.reset_ancestor_ids

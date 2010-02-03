@@ -1,0 +1,8 @@
+Rails 2.0.2
+Mongrel
+
+Download Files (svn repo)
+
+create a mysql databases called thdl_places_development, thdl_places_test
+copy config/database.example to config/database.yml
+open config/database.yml and change settings to match your database (skip production)

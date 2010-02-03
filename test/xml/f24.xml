@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root-element SYSTEM "http://www.thdl.org/collections/cultgeo/gazetteer2/gaz-dtd/gazetteer.dtd">
+
+<feature id="f24">
+    <fheader>
+        <fclass term="neighborhood committee" type="administrative"/>
+    </fheader>
+    <fname lang="tib">
+        <geogname>ཤ་གསར་ཟུར།</geogname>
+        <authority>dln</authority>
+        <transliteration type="orthographic" scheme="tib-wylie" resp="TDHL">
+            <geogname>sha gsar zur</geogname>
+        </transliteration>
+        <transliteration type="phonetic" scheme="chi.simplified" resp="CHGIS">
+            <geogname>夏萨苏</geogname>
+            <authority id="au1">90Census</authority>
+            <transliteration id="tr1" type="phonetic" scheme="pinyin" resp="CHGIS">
+                <geogname>Xialongsu</geogname>
+            </transliteration>
+        </transliteration>
+    </fname>
+    <place>
+        <geometry projection="geographic">
+            <point>
+                <lat units="signed decimal degrees">29.234</lat>
+                <long units="signed decimal degrees">91.480</long>
+            </point>
+            <measurement>
+                <authority>Lhasa Chengguan Map</authority>
+                <accuracy>
+                    <p>Location estimated from Lhasa Chengguan
+                     Map.</p>
+                </accuracy>
+            </measurement>
+        </geometry>
+    </place>
+    <frel role="partof">
+        <extref href="f21"/>
+    </frel>
+</feature>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE feature SYSTEM "http://www.thdl.org/collections/cultgeo/gazetteer2/gaz-dtd/gazetteer.dtd">  <feature id="f36">
+    <fheader><fclass term="neighborhood committee" type="administrative"/></fheader>
+    <fname lang="tib">
+        <geogname>རབ་གསལ།</geogname>
+        <authority>dln</authority>
+        <transliteration type="orthographic" scheme="tib-wylie" resp="TDHL">
+            <geogname>rab gsal</geogname>
+        </transliteration>
+        <transliteration type="phonetic" scheme="chi.simplified" resp="CHGIS">
+            <geogname>热赛</geogname>
+            <authority id="au1">90Census</authority>
+            <transliteration id="tr1" type="phonetic" scheme="pinyin" resp="CHGIS">
+                <geogname>Resai</geogname>
+            </transliteration>
+        </transliteration>
+    </fname>
+    <place>
+        <geometry projection="geographic">
+            <point>
+                <lat units="signed decimal degrees">29.234</lat>
+                <long units="signed decimal degrees">91.480</long>
+            </point>
+            <measurement>
+                <authority>Lhasa Chengguan Map</authority>
+                <accuracy>
+                    <p>Location estimated from map.</p>
+                </accuracy>
+            </measurement>
+        </geometry>
+    </place>
+    <frel role="partof">
+        <extref href="f31"/>
+    </frel>
+</feature>

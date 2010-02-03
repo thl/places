@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE feature SYSTEM "http://www.thdl.org/collections/cultgeo/gazetteer2/gaz-dtd/gazetteer.dtd">  <feature id="f10">
+    <fheader><fclass term="neighborhood committee" type="administrative"/></fheader>
+    <fname lang="tib">
+        <geogname>སྐྱིད་རས།</geogname>
+        <authority>TAR93</authority>
+        <transliteration type="orthographic" scheme="tib-wylie" resp="THDL">
+            <geogname>skyid ras</geogname>
+        </transliteration>
+        <transliteration type="phonetic" scheme="chi.simplified" resp="CHGIS">
+            <geogname>吉日</geogname>
+            <authority id="au1">90Census</authority>
+            <transliteration id="tr1" type="phonetic" scheme="pinyin" resp="CHGIS">
+                <geogname>Jiri</geogname>
+            </transliteration>
+        </transliteration>
+    </fname>
+    <place>
+        <geometry projection="geographic">
+            <point>
+                <lat units="signed decimal degrees">29.234</lat>
+                <long units="signed decimal degrees">91.480</long>
+            </point>
+            <measurement>
+                <authority>Lhasa Chengguan Map</authority>
+            </measurement>
+        </geometry>
+    </place>
+    <frel role="partof">
+        <extref href="f9"/>
+    </frel>
+</feature>

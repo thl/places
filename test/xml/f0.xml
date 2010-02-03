@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE feature SYSTEM "http://www.thdl.org/collections/cultgeo/gazetteer2/gaz-dtd/gazetteer.dtd">
+
+<feature id="f0">
+    <fheader>
+        <fclass term="country" type="administrative"/>
+    </fheader>
+    <fname lang="tib">
+        <geogname>ཀྲུང་གོ</geogname>
+        <authority>TAR93</authority>
+        
+        <transliteration id="tr1" scheme="tib-wylie" type="orthographic" resp="THDL">
+            <geogname>krung go</geogname>
+        </transliteration>
+    </fname>
+    <fname lang="chi.simplified" resp="THDL">
+        <geogname>中国</geogname>
+        <authority>THDL</authority>
+        
+        <transliteration id="tr2" scheme="pinyin" type="phonetic" resp="CHGIS">
+            <geogname>Zhongguo</geogname>
+        </transliteration>
+    </fname>
+    <fname lang="chi.traditional" resp="THDL">
+        <geogname>中國</geogname>
+        <authority>90Census</authority>
+        
+        <transliteration id="tr3" scheme="pinyin" type="phonetic" resp="CHGIS">
+            <geogname>Zhongguo</geogname>
+        </transliteration>
+    </fname>
+    <fname lang="eng" resp="THDL">
+        <geogname>China</geogname>
+    </fname>
+    <place>
+        
+        <boundedby projection="geographic-WGS_1984">
+            <northlat units="signed decimal degrees"> 53.574</northlat>
+            <westlong units="signed decimal degrees"> 73.590</westlong>
+            <southlat units="signed decimal degrees"> 18.171</southlat>
+            <eastlong units="signed decimal degrees"> 134.818</eastlong>
+            
+            <measurement>
+                <authority>ESRI "Country" shape file</authority>
+            </measurement>
+        </boundedby>
+    </place>
+</feature>

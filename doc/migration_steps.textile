@@ -1,0 +1,34 @@
+h1. Places Migration from MySQL to PostgreSQL
+
+h2. Overview
+
+This document will outline the steps taken (and to take) to migrate the Places Dictionary application from a MySQL database to a PostgreSQL database.  The steps are based on this document: "http://ducktyped.com/2007/6/12/how-to-change-databases-using-ruby-on-rails":http://ducktyped.com/2007/6/12/how-to-change-databases-using-ruby-on-rails
+
+h2. Assumptions
+
+* PostgreSQL database server accessible
+* PostGIS database is available
+* PostGIS database is backed up
+* PostGIS connection information is available and ready for use
+* MySQL database is available
+* MySQL database is backed up
+* Rake is available
+* The application has been updated to include changes required to run on PostgreSQL
+* Systems Administrator can manage webserver access to the application
+* Systems Administrator has access to the application structure
+* Systems Administrator available to issue the Rake commands
+* Systems Administrator has permission to write files in application structure
+
+h2. Steps
+
+# Backup MySQL database
+# Shut down webserver access to the application
+# Within the application structure, run this command: <code>RAILS_ENV=production rake db:schema:dump</code>
+# Next, run this command: <code>RAILS_ENV=production rake db:backup:write</code>
+# Now change config/database.yml to point to the PostgreSQL database
+# Next, run this command: <code>RAILS_ENV=production rake db:backup:read</code>
+# And then this command: <code>RAILS_ENV=production rake db:backup:set_sequences</code>
+
+h2. Conculsion
+
+By now the Places Dictionary application should be running on top of a PostgreSQL database.  The 'db/backup' can safely be removed too; keeping it there also does no harm.

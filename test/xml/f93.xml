@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE feature SYSTEM "http://www.thdl.org/collections/cultgeo/gazetteer2/gaz-dtd/gazetteer.dtd">  <feature id="f93">
+    <fheader><fclass term="county" type="administrative"/></fheader>
+    <fname lang="tib">
+        <geogname>སྟོད་ལུང་བདེ་ཆེན།</geogname>
+        <authority>TAR93</authority>
+        <transliteration type="orthographic" scheme="tib-wylie" resp="THDL">
+            <geogname>stod lung bde chen</geogname>
+        </transliteration>
+        <transliteration type="phonetic" scheme="chi.simplified" resp="CHGIS">
+            <geogname>堆龙德庆</geogname>
+            <authority id="au1">90Census</authority>
+            <transliteration id="tr1" type="phonetic" scheme="pinyin" resp="CHGIS">
+                <geogname>Duilongdeqing</geogname>
+            </transliteration>
+        </transliteration>
+    </fname>
+    <place>
+        <geometry projection="geographic">
+            <point>
+                <lat units="signed decimal degrees">29.828</lat>
+                <long units="signed decimal degrees">90.719</long>
+            </point>
+            <measurement>
+                <authority>Ryavec County GIS
+                  "vCounty.e00"</authority>
+                <accuracy>
+                    <p>Centroid of GIS polygon</p>
+                </accuracy>
+            </measurement>
+        </geometry>
+    </place>
+    <frel role="partof">
+        <extref href="f2"/>
+    </frel>
+</feature>

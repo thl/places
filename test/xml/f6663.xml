@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE feature SYSTEM "http://www.thdl.org/collections/cultgeo/gazetteer2/gaz-dtd/gazetteer.dtd">  <feature id="f6663">
+    <fheader><fclass term="village development committee" type="administrative"/></fheader>
+    <fname lang="nep" resp="Cornell" type="nep.no-diacritics">
+        <geogname>Dhuskee</geogname>
+        <authority>2001 Census</authority>
+    </fname>
+    <place>
+        <geometry projection="geographic">
+            <point>
+                <lat units="signed decimal degrees">Lat</lat>
+                <long units="signed decimal degrees">87.097</long>
+            </point>
+            <measurement>
+                <authority>Nepal Cartography Consultants</authority>
+                <method>
+                    <p>GIS point coverage</p>
+                </method>
+            </measurement>
+        </geometry>
+    </place>
+    <frel role="partof">
+        <time>
+            <date>2001</date>
+            <authority>2001 Census</authority>
+        </time>
+        <extref href="f4507"/>
+    </frel>
+</feature>

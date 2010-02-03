@@ -1,0 +1,291 @@
+notes by mel riffe, started 16 june 2008:
+
+1) for some reason after the postgres migration we can no longer do finder queries of the sort:  Feature.find_all_by_is_public(true); the generated sql is not correct: "is_public" = "t" (to paraphrase and summarize). substituting true with 1 works (false => 0).
+
+2) don't understand the fascination with svn externals for plugins. i will be converting the non-uva plugins to their non-svn-external versions. will probably run into compatibility issues now that some of the plugins will be in a GIT repository. 
+
+3) [Test Database is now getting created] the gis database integration is trickier then first thought; testing for all intents and purposes becomes disabled. because the postgis database requires special commands to create it, rails way of cloning the structure fails, essentially killing testing.  i need to figure out a way to hook into the spatial adapter to issue the correct commands when creating the test database.
+
+4) i also want to include all the required gems into vendor/gems. i will need to make sure the paths are in the config.load_path. i think i will also need to look into the require_gems.rb initializer. this will give us a nicely contained, constrained application that could be, theoretically speaking, dropped where ever ruby and mongrel are deployed. i started with GeoRuby. the initializer should only require gems needed for the application and not for plugins; the plugins will/should already contain their require statement. 
+
+5) creating a postgis database from the command line consists of the following commands:
+
+createdb test
+createlang plpgsql test
+psql -d test -f share/lwpostgis.sql
+psql -d test -f share/spatial_ref_sys.sql
+
+6) the SHAPES table, from the current dump, baffles me. ActiveRecord::StatementInvalid: PGError: ERROR:  relation "shapes_gid_seq" does not exist.
+
+
+interesting links:
+http://www.datanoise.com/articles/2006/7/12/tutorial-on-ruby-debug
+http://agilewebdevelopment.com/plugins/spatial_adapter
+
+19 June 2008:
+
+1) shapes table has no primary key; GID looks a likely candidate. shapes table has duplicate rows for some FIDs (over 3900 instances of multiple FIDs). schema dump doesn't assign an SRID to the geometry column because there's no corresponding information in the geometry_cloumns table - huh?
+
+SELECT FID, COUNT(*)
+FROM SHAPES
+GROUP BY FID
+HAVING COUNT(*) > 1
+ORDER BY COUNT(*) DESC
+
+2) the shapes gid column is defined to use a sequence that doesn't exist. there should probably be an index on the FID column now that the two datasets comingle.
+
+3) gather up all your questions about the SHAPES table and send them to adam, cc'ing everybody and their brother.
+
+4) multipoint testing in fixtures, using data from the export, causes TM to stop responding. too much data
+
+
+1 July 2008:
+
+sequential feature ids: i'm thinking i won't use a migration but will use a script that will have to get executed after deployment.  i could probably wrap it up in a rake task, removing it or disabling it once it's been executed.
+
+the feature ids, or pids, exist in two places: features.pid and shapes.fid.  for each features.pid there are zero or more shapes.fid.
+
+no, on second thought, i will try to use the migration framework.
+
+no, on third thought, i think i have to do this in a SQL script - darned constraints
+
+
+3 July 2008:
+
+http://geospatial.nomad-labs.com/2006/12/24/postgis-template-database/
+
+10:17:49 > Updated to revision 6046.
+
+new action items!
+
+Until the database is taken care of, perform the following steps AFTER a database restore and BEFORE running the tests:
+* remove the views
+* add an entry in geometry_columns for shapes.geometry
+* remove 7-char limit on shapes.fid
+* gid as shapes_pkey
+
+16:05:07 > Updated to revision 6048.
+17:02:11 > Updated to revision 6051.
+
+8 July 2008:
+
+11:15:17 > Updated to revision 6082. [staging]
+11:21:31 > Updated to revision 6082. [production]
+
+14:49:44 > Updated to revision 6090. [staging]
+
+10 July 2008:
+
+new friday work report
+working on todo list
+sent email to bess and matt
+
+apps busted; andres working on a fix; even my local app is busted :-(
+
+- PGS specific change to use ILIKE; Committed revision 6147.
+- TOC moved to right-side of screen; Committed revision 6150.
+
+15 July 2008 =================================================================:
+
+writing systems sql exercise
+"writing systems in the system that are not getting used in feature names"
+select * from simple_props where type = 'WritingSystem' and id not in (select distinct writing_system_id from feature_names)
+
+looks like they're all being used!
+
+select fn.name as feature_name, sp.name as writing_system_name, sp.code as writing_system_code 
+from feature_names fn, simple_props sp
+where sp.type = 'WritingSystem'
+and sp.id = fn.writing_system_id
+order by sp.name, sp.code
+
+select * from simple_props where type = 'WritingSystem' and id in (select writing_system_id from feature_names)
+
+looks like some are being used.
+
+select * from simple_props where type = 'WritingSystem' 
+and not exists (select 1 from feature_names where writing_system_id = simple_props.id)
+
+these are the ones not getting used:
+3882056;"Simplified Chinese Characters";"chi.simplified"
+12847269;"Nepali with Diacritics";"nepali.diacritics"
+845739019;"Devanagari";"deva"
+909377119;"Dzongkha";"dzongkha"
+
+Used this SQL Reference: http://www.network-theory.co.uk/docs/postgresql/vol1/index.html
+
+
+SELECT writing_system_id, COUNT(*)
+FROM feature_names 
+GROUP BY writing_system_id
+HAVING COUNT(*) > 0
+ORDER BY COUNT(*) DESC
+
+Using "Traditional Chinese Characters";"chi.traditional"
+select * from feature_names where writing_system_id = 532181863
+select * from features where id = 5284
+f5226: Cultural Tibet
+
+Fixed displaying of Cultural Region (Committed revision 6253.)
+
+Bold selected END-USER node (Committed revision 6254.)
+
+Need to read up on RJS as I think I may need it when doing the feature/search div display.
+
+Breadcrumb fixed (Committed revision 6255.)
+
+Editorial Changes (Committed revision 6256.)
+
+01:37:10 > Updated to revision 6256.
+
+17 July 2008 =================================================================:
+
+adding side-bar links (Committed revision 6303. Committed revision 6304.)
+
+viewing list of feature names in feature details (Committed revision 6305.)
+
+additional changes, mostly minor (Committed revision 6306.)
+
+21 July 2008 =================================================================:
+
+11:22:19 > Updated to revision 6331.
+
+Where did China and Nepal go?
+
+My Timespan#method_missing was screwing me up - doh!
+
+working on removing lightbox stuff (Committed revision 6335.)
+
+14:57:52 > Updated to revision 6335.
+
+removing debugging code for missing current roots (Committed revision 6338.)
+
+15:01:12 > Updated to revision 6338.
+
+changing sidebar links; still can't use #wiki (Committed revision 6339.)
+
+15:17:03 > Updated to revision 6339.
+
+last changing of sidebar links (Committed revision 6341.)
+
+15:22:06 > Updated to revision 6341.
+
+removed call to load jquery; added help tips to links (Committed revision 6350.)
+
+00:25:30 > Updated to revision 6350.
+
+removed timespans from admin dropdown  (Committed revision 6351.)
+
+01:10:02 > Updated to revision 6351.
+
+24 July 2008 =================================================================:
+
+Priority: feature name relationships editing view.
+
+starting feature names editing changes (14:19:52 > Updated to revision 6405.)
+clean up feature name relationships list view (Committed revision 6406.)
+new name, and primary name indicator (15:43:43 > Updated to revision 6409.)
+additional changes to feature name relations (16:45:35 > Updated to revision 6410.)
+adding missing partial (16:48:54 > Updated to revision 6411.)
+removing timespan from feature name relation edit view, adding locate link (17:33:50 > Updated to revision 6412.)
+added relationships column (18:32:03 > Updated to revision 6413.)
+select a new feature name link; splat for primary; tabular view of feature name relations (19:57:51 > Updated to revision 6414.)
+feature name citations; feature name relation citations (20:56:55 > Updated to revision 6415.)
+revert feature name relation styling (21:01:50 > Updated to revision 6416.)
+parent -> original; new empty citations message; sorting and concise names list (23:30:56 > Updated to revision 6417.)
+reverting names list sorting (23:34:01 > Updated to revision 6418.)
+no citations view link; locating relation changes (00:12:20 > Updated to revision 6419.)
+new name header; empty collection message for no related names (00:24:44 > Updated to revision 6420.)
+feature name relation editing (01:29:41 > Updated to revision 6421.)
+trying to clean up feature name relations display (02:06:13 > Updated to revision 6422.)
+names list sorting (02:28:45 > Updated to revision 6423.)
+attempting to fix creeping font size (02:46:25 > Updated to revision 6424.)
+fixing the sorting of the names list (02:49:24 > Updated to revision 6425.)
+
+29 July 2008 =================================================================:
+
+researching changes for #1; making end user changes 1a. (19:29:04 > Updated to revision 6453.)
+
+31 July 2008 =================================================================:
+
+making end user changes;
+
+deploying to production (14:42:23 > Updated to revision 6507.)
+
+commenting out all references to Feature#object_types ()
+
+backing out all my changes - can't make it work
+
+05 August 2008 ===============================================================:
+
+Back from a HD crash. Need to install postgresql, postgis (and it's dependencies),
+and then create and load the thdl_places_development database.
+
+After that I'll run the tests.  Those that are there should all pass.
+
+database import: FAIL
+
+working, working
+
+select count(*) from features where not exists (select 1 from shapes where fid = features.pid);
+3993
+
+select count(*) from shapes where not exists (select 1 from features where pid = shapes.fid);
+7762
+
+---------------------------------------
+* conf call w/david
+* conf call w/matt regarding removing lightbox
+* intially hiding sidenav menu (Committed revision 6616)
+* initial solution to removing lightbox and using tabbed inteface (Committed revision 6627)
+* 18:54:12 > Updated to revision 6627
+* smaller diamond on terminal nodes (Committed revision 6630)
+* linking KM wiki (Committed revision 6631)
+* displaying geo codes; conditionally display labels (Committed revision 6633)
+* 20:36:44 > Updated to revision 6633
+
+tab notes: move a features related bits to separate tab; name tab 'contains'
+side-nav notes: show regular page, but when searching hide the side-nav and expand the column; jquery dynamic css and js time?
+
+07 August 2008 ===============================================================:
+
+template debugging (sites down); preferences research and clarification; task prioritization w/DG;
+
+[preferences note:
+for English, 
+  if a name's language is "tib" then display the "thl.simple.transcrip" phonetic
+  if a name's language is "nep" then display the "ind.transcrip" phonetic
+  if a name's language is "chi" then display the "pinyin" phonetic
+  if a name's language is "eng" then display
+]
+
+removing map link from feature entry; working on moving related features; (Committed revision 6726)
+
+[can't change the color of the tabs because that's controlled by an image file]
+
+[
+<p>This feature contains:</p>
+<ul>
+<% descendants.each do |child| %>
+	<li><%= feature_link_switch(child) %> <!-- :: <%#= child.object_types.first.title rescue child.id %> --></li>
+<% end %>
+</ul>
+]
+
+adding a Contains tab (Committed revision 6732); 15:46:22 > Updated to revision 6732
+
+non-working pagination for a features related features (Committed revision 6743); 17:37:43 > Updated to revision 6743
+
+08 August 2008 ===============================================================:
+
+making minor edits; adding grey background and border to feature tree; (Committed revision 6796); added Browse to label; making font size smaller; (Committed revision 6798); show results tab for search; (Committed revision 6799); search results to feature detail tab; (Committed revision 6800); formatting contains tab; (Committed revision 6801); 19:32:29 > Updated to revision 6801.
+
+additional edits; changing background color and removing extra space; (Committed revision 6813); paging search results and displaying search results tab; (Committed revision 6814); capitalizing pid, changing secondary nav label, and changing to Names; (Committed revision 6815); partial solution for contains paging; (Committed revision 6822); 
+
+09 August 2008 ===============================================================:
+
+end game, part one; names display for END USER; (Committed revision 6834); added vibhu to exception notifier; (Committed revision 6835); reintegrate knowledge maps; (Committed revision 6836); [Staging] 22:30:38 > Updated to revision 6836; [Production] 22:32:16 > Updated to revision 6836; disabling knowledge map integration; (Committed revision 6837); [Staging] 22:57:33 > Updated to revision 6837; [Production] 22:58:26 > Updated to revision 6837; save point for preferences; (Committed revision 6850); name preferences implementation; (Committed revision 6851); [Staging] 02:58:46 > Updated to revision 6851
+
+10 August 2008 ===============================================================:
+
+end game pt. 2; original names; feature name header and breadcrumbs; global/contextual search; name bullets; (Committed revision 6871); linked breadcrumbs; (Committed revision 6874); Contains paging; (Committed revision 6881); [Staging] 01:16:45 > Updated to revision 6881; [Production] 01:18:03 > Updated to revision 6881; 

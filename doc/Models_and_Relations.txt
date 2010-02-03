@@ -1,0 +1,42 @@
+Models and their Relationships
+
+Features
+Features are the main models. They can relate to each other in different ways (part of, adjacent, contains etc.). A Feature can relate to many other Features through link models called Feature Relations. For tree building, the current "partof" (a Feature) is considered the parent. A Feature has_many Feature Names and Info Sources. A Feature has_one Feature Type. Features also store a description, the THDL-Places feature id and date information.
+
+Feature Relations
+A model that links one Feature to another. This model stores the kind of Feature relationship (partof, adjacent, contains etc.), has_many Info Sources, a Polity and date information.
+
+Feature Names
+A Feature Name belongs_to a Feature. A Feature Name can relate to many other Feature Names through link models called Feature Name Relations. A Feature Name has_one Feature Name Type, has_one Writing System and has_one Language. It also stores the text/name, etymology, an is_current flag, an is_primary flag and date information.
+
+Feature Name Relations
+A model that links one Feature Name to another. A Feature Name Relation has_many Info Sources. It also stores an is_phonotic flag, an is_orthographic flag, an is_translation flag, an is_alt_spelling flag, the phonetic_system, the orthographic_system, the alt_spelling_system and date information.
+
+Writing Systems
+Examples: Chinese Simplified (chi.simplified), Chinese Traditional (chi.traditional), Tibetan (tib), etc..
+
+Languages
+English (eng), Chinese (chi) etc.
+
+Info Sources
+A source from whence the research information came.
+
+Polities
+"Contemporary Administrative Hierarchy", "The Golden Age"
+
+------------
+
+Feature Types
+This information will be coming from another HTTP/XML application. Examples: Country, County etc..
+
+Feature Name Types
+"Official", "Popular"
+
+Phonetic Systems
+"Pinyin"
+
+Orthographic Systems
+"Tib-Wylie", "Pinyin"
+
+Alt Spelling Systems
+"Mistake"

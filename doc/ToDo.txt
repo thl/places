@@ -1,0 +1,18 @@
+DONE - Recursive bug when adding new feature relations when role is not child/parent
+DONE - Update ancestor ids doesn't seem to be working when *creating* new features/names
+
+DONE - FeatureObjectType UI needs the following:
+	perspective
+	notes
+	timespan
+	citations
+
+DONE - Search function on FeatureObjectTypes NOT working
+
+DONE - Feature Name - writing system and language not displaying (code || name issue)
+
+
+
+
+
+http://blog.pepperdust.org/2007/2/13/enabling-wire-level-debug-output-for-activeresource

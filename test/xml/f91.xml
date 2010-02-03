@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE feature SYSTEM "http://www.thdl.org/collections/cultgeo/gazetteer2/gaz-dtd/gazetteer.dtd">  <feature id="f91">
+    <fheader><fclass term="township (without urban registered population)" type="administrative"/></fheader>
+    <fname lang="tib">
+        <geogname>ས་སྨད།</geogname>
+        <authority>TAR93</authority>
+        <transliteration type="orthographic" scheme="tib-wylie" resp="THDL">
+            <geogname>sa smad</geogname>
+        </transliteration>
+        <transliteration type="phonetic" scheme="chi.simplified" resp="CHGIS">
+            <geogname>色麦</geogname>
+            <authority id="au1">90Census</authority>
+            <transliteration id="tr1" type="phonetic" scheme="pinyin" resp="CHGIS">
+                <geogname>Semai</geogname>
+            </transliteration>
+        </transliteration>
+    </fname>
+    <place>
+        <geometry projection="geographic">
+            <point>
+                <lat units="signed decimal degrees">29.263</lat>
+                <long units="signed decimal degrees">90.487</long>
+            </point>
+            <measurement>
+                <authority>Ryavec Township GIS
+                  "vtarpt.e00"</authority>
+                <accuracy>
+                    <p>Township seat</p>
+                </accuracy>
+            </measurement>
+        </geometry>
+    </place>
+    <place>
+        <geometry projection="geographic">
+            <point>
+                <lat units="signed decimal degrees">29.900</lat>
+                <long units="signed decimal degrees">90.168</long>
+            </point>
+            <measurement>
+                <authority>TAR93</authority>
+            </measurement>
+        </geometry>
+    </place>
+    <frel role="partof">
+        <extref href="f82"/>
+    </frel>
+</feature>

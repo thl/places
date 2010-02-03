@@ -1,0 +1,50 @@
+######### Relation Browser (uses relation browser rails plugin) #########
+	module ActiveRecord
+	  module Acts
+	    module NestedSet
+	      module ClassMethods
+
+	      end
+	    end
+	  end
+	end
+
+	For acts_as_family_tree to have a compatible interface to relation browser plugin:
+
+	# ActsAsNestedSet (RelationBrowserPlugin)
+
+	extend ActiveRecord::Acts::NestedSet::ClassMethods
+
+	alias_method :orig_children, :children
+
+	def children
+	c = orig_children
+	(c.map(&:children) + c).compact.flatten.uniq
+	end
+
+	# Returns a set of itself and all of its nested children
+	def full_set
+	children + [self]
+	end
+
+	# Returns a set of only this entry‘s immediate children
+	def direct_children
+	orig_children
+	end
+
+	This will breaks the rest of the application though :( - For the relation browser plugin to work, the source code (or indirect manipulation) of the code would be needed.
+
+
+
+######### ACTS AS SOLR #########
+	* The following seems to work (in controller)
+	@context_feature = Feature.find(params[:context_id]) rescue nil
+	@results = Feature.find_by_solr(params[:filter].blank? ? '[* TO *]' : params[:filter])
+	@collection  = @results.docs
+	@total_hits = @results.total_hits
+
+	* And the pagination in the view:
+	<%= will_paginate(
+		WillPaginate::Collection.new((params[:page]||1),
+		(params[:products_per_page]||10),@total_hits)
+	) -%>

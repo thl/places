@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE feature SYSTEM "http://www.thdl.org/collections/cultgeo/gazetteer2/gaz-dtd/gazetteer.dtd">  <feature id="f4507">
+    <fheader><fclass term="district" type="administrative"/></fheader>
+    <fname lang="nep" resp="Turin">
+        <geogname>सुनसरी</geogname>
+        <authority>2001 Census</authority>
+        <transliteration type="phonetic" scheme="nep.diacritics">
+            <geogname>Sunsarī</geogname>
+        </transliteration>
+        <transliteration type="phonetic" scheme="nep.no-diacritics">
+            <geogname>Sunsari</geogname>
+        </transliteration>
+    </fname>
+    <place>
+        <geometry projection="geographic">
+            <point>
+                <lat units="signed decimal degrees">26.650</lat>
+                <long units="signed decimal degrees">87.168</long>
+            </point>
+            <measurement>
+                <authority>Nepal Cartography Consultants</authority>
+                <method>
+                    <p>Midpoint of district GIS polygon</p>
+                </method>
+            </measurement>
+        </geometry>
+    </place>
+    <frel role="partof">
+        <time>
+            <date>2001</date>
+            <authority>2001 Census</authority>
+        </time>
+        <extref href="f4505"/>
+    </frel>
+</feature>
