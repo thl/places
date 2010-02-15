@@ -1,29 +1,67 @@
 var ModelSearcher = {
 
-	listService: '',
-	treeService: '',
-	proxy: '/thl/utils/proxy/?proxy_url=',
+	// URL for JSON that lists categories in the form [{"name":"Agricultrure","id":4074},{"name":"Agriculture","id":2558}]
+	listService: "",
+	
+	// URL for JSON that lists categories in a hierachy (see ModelSearch.createTreeFromArray() for details)
+	treeService: "",
+	
+	// A script on the same subdomain. When a URL is appended to this string, the resulting URL should return the original URL's content.
+	// The proxy can be bypassed by using service URLs that don't begin with "http" (and are thus on the subdomain and don't need a proxy)
+	proxy: "/thl/utils/proxy/?proxy_url=",
+	
+	// The id attribute of the div which contains all of DOM elements for this 
 	divId: "",
+	
+	// The jQuery-wrapped DOM element of the div which contains all of DOM elements for this
 	div: null,
-	field: null,
+	
+	// The name, label, and style attributes of the hidden field in which the selected ID(s) will be entered
 	fieldName: "searcher_id_input",
 	fieldLabel: "",
 	fieldStyle: "",
+	
+	// Another method of adding objects (instead of using services)
 	objectList: null,
+	
+	// A JS array of the object(s) which should be selected in the form [{id: '2594', name: 'animals'}]
 	selectedObjects: null,
-	hasTree: true,
+	
+	// The jQuery-wrapped DOM element of the hidden input which stores the selected ID(s)
+	hiddenIdInput: null,
+	
+	// The jQuery-wrapped DOM element of the autocomplete text field input
+	autocompleteInput: null,
+	
+	// Whether or not a tree (and the accompanying tree link) should be used 
+	hasTree: false,
+	
+	// Whether the user can select only one category from the tree (if present) or select multiple categories
 	singleSelectionTree: false,
-	treePopup: null,
+	
+	// The id attribute of the div which contains the tree popup
 	treePopupId: "model_searcher_tree_popup",
+	
+	// The jQuery-wrapped DOM element of the div which contains the tree popup
+	treePopup: null,
+	
+	// The jQuery-wrapped DOM element that lists the names selected from the tree
+	treeNames: null,
+	
+	// The jQuery-wrapped DOM element that removes the names selected from the tree
+	treeRemove: null,
+	
 	treeHtml: null,
 	treeLoaded: false,
 	
+	// See the attribute documentation above for explanations of these arguments
 	init: function(divId, listService, treeService, options){
 		this.listService = listService;
 		this.treeService = treeService;
 		if(options.fieldName)			{ this.fieldName = options.fieldName; }
 		if(options.fieldLabel)			{ this.fieldLabel = options.fieldLabel; }
 		if(options.selectedObjects)		{ this.selectedObjects = options.selectedObjects; }
+		if(options.hasTree)				{ this.hasTree = options.hasTree; }
 		if(options.singleSelectionTree)	{ this.singleSelectionTree = options.singleSelectionTree; }
 		if(options.proxy)				{ this.proxy = options.proxy; }
 		this.divId = divId;
@@ -148,6 +186,16 @@ var ModelSearcher = {
 		// For large trees, keeping this in memory can cause performance issues, so we'll set it to null
 		// and use ModelSearcher.treePopupId when we need it.
 		ModelSearcher.treePopup = null;
+	},
+	
+	resetFields: function(){
+		this.autocompleteInput.val('');
+		this.hiddenIdInput.val('');
+		if(this.hasTree){
+			this.treeNames.html('');
+			this.treeRemove.hide();
+			jQuery('#'+this.treePopupId).hide();
+		}
 	},
 	
 	autocompleteFormatItem: function(item, i, max){
