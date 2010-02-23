@@ -21,6 +21,7 @@ var ThlTabs = {
 	
 	init: function(tabs_id, default_tab_codes){
 		this.tabs_id = tabs_id;
+		this.default_tab_codes = default_tab_codes;
 		this.div = $('#'+this.tabs_id);
 		this.setTabs();
 	},
