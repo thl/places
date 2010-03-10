@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100201224350) do
+ActiveRecord::Schema.define(:version => 20100305012933) do
 
   create_table "authors_descriptions", :id => false, :force => true do |t|
     t.column "author_id", :integer, :null => false
@@ -17,6 +17,13 @@ ActiveRecord::Schema.define(:version => 20100201224350) do
   end
 
   add_index "authors_descriptions", ["author_id", "description_id"], :name => "index_authors_descriptions_on_author_id_and_description_id", :unique => true
+
+  create_table "authors_notes", :id => false, :force => true do |t|
+    t.column "author_id", :integer, :null => false
+    t.column "note_id", :integer, :null => false
+  end
+
+  add_index "authors_notes", ["author_id", "note_id"], :name => "index_authors_notes_on_author_id_and_note_id", :unique => true
 
   create_table "bbox", :id => false, :force => true do |t|
     t.column "gid", :integer
@@ -236,6 +243,22 @@ ActiveRecord::Schema.define(:version => 20100201224350) do
     t.column "name", :string
     t.column "geotype", :text
     t.column "geometry", :geometry, :srid => nil
+  end
+
+  create_table "note_titles", :force => true do |t|
+    t.column "title", :string
+    t.column "created_at", :timestamp
+    t.column "updated_at", :timestamp
+  end
+
+  create_table "notes", :force => true do |t|
+    t.column "notable_type", :string
+    t.column "notable_id", :integer
+    t.column "note_title_id", :integer
+    t.column "custom_note_title", :string
+    t.column "content", :text
+    t.column "created_at", :timestamp
+    t.column "updated_at", :timestamp
   end
 
 # Could not dump table "open_id_authentication_associations" because of following StandardError
