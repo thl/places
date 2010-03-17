@@ -72,5 +72,3 @@ ul.tree li .half_checked {
 .single_selection_tree .checkbox {
 	display: none;
 }
-
-ul.tree li { line-height: 1.6em }
