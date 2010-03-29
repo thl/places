@@ -34,3 +34,6 @@
 [submodule "vendor/plugins/proxy_engine"]
 	path = vendor/plugins/proxy_engine
 	url = git://github.com/thl/proxy_engine.git
+[submodule "vendor/plugins/interface_utils"]
+	path = vendor/plugins/interface_utils
+	url = git://github.com/thl/interface_utils.git
