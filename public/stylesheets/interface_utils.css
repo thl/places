@@ -1,0 +1,20 @@
+.item-icon-delete{
+	padding:0 0 0 18px;
+	background:transparent no-repeat url(../images/item-delete.png) 2px 2px;
+}
+.item-icon-edit{
+	padding:0 0 0 18px;
+	background:transparent no-repeat url(../images/item-edit.png) 2px 2px;
+}
+.item-icon-manage{
+	padding:0 0 0 18px;
+	background:transparent no-repeat url(../images/item-manage.png) 2px 2px;
+}
+.item-icon-new{
+	padding:0 0 0 18px;
+	background:transparent no-repeat url(../images/item-new.png) 2px 2px;
+}
+.item-icon-view{
+	padding:0 0 0 22px;
+	background:transparent no-repeat url(../images/item-view.png) 2px 2px;
+}
