@@ -37,3 +37,9 @@
 [submodule "vendor/plugins/interface_utils"]
 	path = vendor/plugins/interface_utils
 	url = git://github.com/thl/interface_utils.git
+[submodule "vendor/plugins/passiverecord"]
+	path = vendor/plugins/passiverecord
+	url = git://github.com/ambethia/passiverecord.git
+[submodule "vendor/plugins/complex_dates"]
+	path = vendor/plugins/complex_dates
+	url = git://github.com/thl/complex_dates.git

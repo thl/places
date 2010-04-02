@@ -1,0 +1,49 @@
+fieldset.time-unit, fieldset.time-unit fieldset, fieldset.complex-date, fieldset.complex-date-range {
+	/*padding: 10px;*/
+	font-size: 14px !important;
+}
+
+fieldset.time-unit legend {
+	/*font-size: 14px;
+	padding: 3px;*/
+	z-index: 5;
+}
+
+fieldset.complex-date label {
+	margin: 0 5px 3px 0;
+	display: block;
+}
+
+fieldset.complex-date .complex-date-end-wrapper {
+	margin-top: 5px;
+}
+
+fieldset.complex-date .complex-date-end-wrapper label {
+	display: inline;
+}
+
+fieldset.complex-date select, fieldset.complex-date input {
+	width: 100px;
+}
+
+fieldset.complex-date {
+	width: 300px;
+	float: left;
+	clear: none;
+}
+
+fieldset.complex-date-range {
+	width: 750px;
+}
+
+fieldset.complex-date-range > fieldset.complex-date {
+	margin-right: 10px;
+}
+
+.complex-date-certainty-wrapper {
+	float: right;
+}
+
+.time-unit-range-wrapper {
+	width: 420px;
+}
