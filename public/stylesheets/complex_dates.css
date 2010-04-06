@@ -1,11 +1,8 @@
 fieldset.time-unit, fieldset.time-unit fieldset, fieldset.complex-date, fieldset.complex-date-range {
-	/*padding: 10px;*/
 	font-size: 14px !important;
 }
 
 fieldset.time-unit legend {
-	/*font-size: 14px;
-	padding: 3px;*/
 	z-index: 5;
 }
 
@@ -26,6 +23,10 @@ fieldset.complex-date select, fieldset.complex-date input {
 	width: 100px;
 }
 
+fieldset.complex-date select.intercalary {
+	width: 60px;
+}
+
 fieldset.complex-date {
 	width: 300px;
 	float: left;
@@ -42,6 +43,7 @@ fieldset.complex-date-range > fieldset.complex-date {
 
 .complex-date-certainty-wrapper {
 	float: right;
+	margin-top: 1.5em;
 }
 
 .time-unit-range-wrapper {
