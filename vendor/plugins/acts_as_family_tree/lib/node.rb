@@ -20,11 +20,11 @@ module MM::Acts::FamilyTree::Node
       config[:extensions][:parents] ||= nil
       config[:extensions][:children] ||= nil
       
-      has_many :parent_relations, :class_name=>config[:tree_class], :foreign_key=>:child_node_id, :dependent=>:destroy, :extend=>config[:extensions][:parent_relations]
-      has_many :child_relations, :class_name=>config[:tree_class], :foreign_key=>:parent_node_id, :dependent=>:destroy, :extend=>config[:extensions][:child_relations]
+      has_many :parent_relations, :class_name=>config[:tree_class], :foreign_key=>:child_node_id, :dependent=>:destroy, :extend=>config[:extensions][:parent_relations], :conditions => config[:conditions]
+      has_many :child_relations, :class_name=>config[:tree_class], :foreign_key=>:parent_node_id, :dependent=>:destroy, :extend=>config[:extensions][:child_relations], :conditions => config[:conditions]
       
-      has_many :parents, :class_name=>name, :through=>:parent_relations, :source=>:parent_node, :extend=>config[:extensions][:parents]
-      has_many :children, :class_name=>name, :through=>:child_relations, :source=>:child_node, :extend=>config[:extensions][:children]
+      has_many :parents, :class_name=>name, :through=>:parent_relations, :source=>:parent_node, :extend=>config[:extensions][:parents], :conditions => config[:conditions]
+      has_many :children, :class_name=>name, :through=>:child_relations, :source=>:child_node, :extend=>config[:extensions][:children], :conditions => config[:conditions]
       
       class_eval <<-EOV
         
