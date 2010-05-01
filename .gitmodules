@@ -40,3 +40,6 @@
 [submodule "vendor/plugins/complex_dates"]
 	path = vendor/plugins/complex_dates
 	url = git://github.com/thl/complex_dates.git
+[submodule "vendor/plugins/annotate_models"]
+	path = vendor/plugins/annotate_models
+	url = git://github.com/amontano/annotate_models.git
