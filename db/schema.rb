@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100415154122) do
+ActiveRecord::Schema.define(:version => 20100428184445) do
 
   create_table "Birth_rate", :id => false, :force => true do |t|
     t.column "gid", :integer, :null => false
@@ -218,6 +218,8 @@ ActiveRecord::Schema.define(:version => 20100415154122) do
     t.column "updated_at", :timestamp
     t.column "position", :integer, :default => 0, :null => false
     t.column "type", :string
+    t.column "string_value", :string
+    t.column "numeric_value", :integer
   end
 
   add_index "category_features", ["feature_id"], :name => "feature_object_types_feature_id_idx"
