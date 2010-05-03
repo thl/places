@@ -1,20 +1,24 @@
-.item-icon-delete{
+.item-icon-delete, .item-icon-edit, .item-icon-manage, .item-icon-new, .item-icon-view{
 	padding:0 0 0 18px;
-	background:transparent no-repeat url(../images/item-delete.png) 2px 2px;
+	display:inline-block;
+	background-color:transparent; 
+	background-position:2px 2px;
+	background-repeat:no-repeat;
+	height:16px;
+}
+.item-icon-delete{
+	background-image:url(../images/item-delete.png);
 }
 .item-icon-edit{
-	padding:0 0 0 18px;
-	background:transparent no-repeat url(../images/item-edit.png) 2px 2px;
+	background-image:url(../images/item-edit.png);
 }
 .item-icon-manage{
-	padding:0 0 0 18px;
-	background:transparent no-repeat url(../images/item-manage.png) 2px 2px;
+	background-image:url(../images/item-manage.png);
 }
 .item-icon-new{
-	padding:0 0 0 18px;
-	background:transparent no-repeat url(../images/item-new.png) 2px 2px;
+	background-image:url(../images/item-new.png);
 }
 .item-icon-view{
 	padding:0 0 0 22px;
-	background:transparent no-repeat url(../images/item-view.png) 2px 2px;
+	background-image:url(../images/item-view.png);
 }
