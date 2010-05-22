@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100429003439) do
+ActiveRecord::Schema.define(:version => 20100521170006) do
 
   create_table "Birth_rate", :id => false, :force => true do |t|
     t.column "gid", :integer, :null => false
@@ -231,7 +231,6 @@ ActiveRecord::Schema.define(:version => 20100429003439) do
     t.column "info_source_id", :integer
     t.column "citable_type", :string
     t.column "citable_id", :integer
-    t.column "pages", :string
     t.column "notes", :text
     t.column "created_at", :timestamp
     t.column "updated_at", :timestamp
@@ -503,6 +502,17 @@ ActiveRecord::Schema.define(:version => 20100429003439) do
     t.column "timestamp", :integer, :null => false
     t.column "server_url", :string, :null => false
     t.column "salt", :string, :null => false
+  end
+
+  create_table "pages", :force => true do |t|
+    t.column "citation_id", :integer
+    t.column "volume", :integer
+    t.column "start_page", :integer
+    t.column "start_line", :integer
+    t.column "end_page", :integer
+    t.column "end_line", :integer
+    t.column "created_at", :timestamp
+    t.column "updated_at", :timestamp
   end
 
   create_table "perspectives", :force => true do |t|
