@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100525173430) do
+ActiveRecord::Schema.define(:version => 20100525230844) do
 
   create_table "Birth_rate", :id => false, :force => true do |t|
     t.column "gid", :integer, :null => false
@@ -121,6 +121,16 @@ ActiveRecord::Schema.define(:version => 20100525173430) do
     t.column "pop_tib", :float
     t.column "rate", :float
     t.column "the_geom", :polygon, :srid => 4326
+  end
+
+  create_table "altitudes", :force => true do |t|
+    t.column "feature_id", :integer, :null => false
+    t.column "maximum", :integer
+    t.column "minimum", :integer
+    t.column "average", :integer
+    t.column "unit_id", :integer, :null => false
+    t.column "created_at", :timestamp
+    t.column "updated_at", :timestamp
   end
 
   create_table "authors_descriptions", :id => false, :force => true do |t|
