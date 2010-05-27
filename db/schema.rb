@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100525230844) do
+ActiveRecord::Schema.define(:version => 20100526225546) do
 
   create_table "Birth_rate", :id => false, :force => true do |t|
     t.column "gid", :integer, :null => false
@@ -397,10 +397,11 @@ ActiveRecord::Schema.define(:version => 20100525230844) do
 
   create_table "feature_relation_types", :force => true do |t|
     t.column "is_symmetric", :boolean
-    t.column "label", :string
+    t.column "label", :string, :null => false
     t.column "asymmetric_label", :string
     t.column "created_at", :timestamp
     t.column "updated_at", :timestamp
+    t.column "code", :string, :null => false
   end
 
   create_table "feature_relations", :force => true do |t|
@@ -412,7 +413,7 @@ ActiveRecord::Schema.define(:version => 20100525230844) do
     t.column "perspective_id", :integer, :null => false
     t.column "created_at", :timestamp
     t.column "updated_at", :timestamp
-    t.column "feature_relation_type_id", :integer
+    t.column "feature_relation_type_id", :integer, :null => false
   end
 
   add_index "feature_relations", ["ancestor_ids"], :name => "feature_relations_ancestor_ids_idx"
@@ -655,6 +656,7 @@ ActiveRecord::Schema.define(:version => 20100525230844) do
     t.column "geometry", :geometry, :srid => 4326
     t.column "fid", :integer
     t.column "position", :integer, :default => 0, :null => false
+    t.column "altitude", :integer
   end
 
   add_index "shapes", ["geometry"], :name => "features_geometry_gist", :spatial=> true 
