@@ -120,6 +120,14 @@ dl.no-style p {
 	border-bottom:0;
 	background:transparent no-repeat url(http://thlib.org/global/images/icon-page-text.gif);
 }
+.note-content {
+	font-size: 13px;
+	line-height: 18px;
+}
+.note-content p {
+	font-size: 13px;
+	line-height: 18px;
+}
 
 .time-units {
 	font-size:0.9em;
@@ -264,6 +272,7 @@ dl.no-style p {
 
 #NodeMenu .text{
 	width:225px;
+	height:33px;
 	border:1px solid #CCCCCC;
 }
 
@@ -444,6 +453,11 @@ dl.no-style p {
 .shell-1 #FeatureDetails h3 {
     margin-top: 9px;
     font-size: 15px;
+}
+
+.shell-1 #FeatureDetails h4 {
+    margin-top: 9px;
+    font-size: 13px;
 }
 
 #FeatureDetails .breadcrumb {
