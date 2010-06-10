@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100602170131) do
+ActiveRecord::Schema.define(:version => 20100609203100) do
 
   create_table "Birth_rate", :id => false, :force => true do |t|
     t.column "gid", :integer, :null => false
@@ -386,6 +386,7 @@ ActiveRecord::Schema.define(:version => 20100602170131) do
     t.column "created_at", :timestamp
     t.column "updated_at", :timestamp
     t.column "code", :string, :null => false
+    t.column "is_hierarchical", :boolean, :default => false, :null => false
   end
 
   create_table "feature_relations", :force => true do |t|
