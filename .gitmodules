@@ -46,3 +46,6 @@
 [submodule "vendor/plugins/mms_integration"]
 	path = vendor/plugins/mms_integration
 	url = git://github.com/thl/mms_integration.git
+[submodule "vendor/plugins/active_resource_extensions"]
+	path = vendor/plugins/active_resource_extensions
+	url = git://github.com/thl/active_resource_extensions.git

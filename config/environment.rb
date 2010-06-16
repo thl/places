@@ -12,4 +12,5 @@ Rails::Initializer.run do |config|
     :session_key => "_thdl_places_session", 
     :secret      => "Tibetan and Himalayan Digital Library - Places".reverse 
   }
+  config.active_record.observers = :cached_category_count_sweeper
 end
