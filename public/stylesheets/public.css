@@ -177,7 +177,9 @@ dl.no-style p {
 
 #FeaturePanelContainer {
     min-height:580px;
-    border:solid 1px #ccc;
+    border-width:0 1px 1px;
+    border-style:solid;
+    border-color:#ccc;
     position:relative;
     overflow:hidden;
 }
