@@ -7,7 +7,7 @@ require File.join(File.dirname(__FILE__), 'boot')
 
 Rails::Initializer.run do |config|
   # config.gem 'fiveruns_tuneup'
-  config.plugins = [:tiny_mce, :exception_notification, :places_engine, :all ]
+  config.plugins = [:acts_as_family_tree, :tiny_mce, :exception_notification, :places_engine, :all ]
   config.action_controller.session = { 
     :session_key => "_thdl_places_session", 
     :secret      => "Tibetan and Himalayan Digital Library - Places".reverse 
