@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100812214612) do
+ActiveRecord::Schema.define(:version => 20101007200406) do
 
   create_table "Birth_rate", :id => false, :force => true do |t|
     t.column "gid", :integer, :null => false
@@ -131,6 +131,7 @@ ActiveRecord::Schema.define(:version => 20100812214612) do
     t.column "unit_id", :integer, :null => false
     t.column "created_at", :timestamp
     t.column "updated_at", :timestamp
+    t.column "estimate", :string
   end
 
   create_table "authors_descriptions", :id => false, :force => true do |t|
