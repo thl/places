@@ -14,4 +14,4 @@ Rails::Initializer.run do |config|
   }
   # config.active_record.observers = :cached_category_count_sweeper
 end
-ActionController::CgiRequest::DEFAULT_SESSION_OPTIONS[:session_domain] = 'thlib.org'
+ActionController::Base.session = { :domain => ".thlib.org" }
