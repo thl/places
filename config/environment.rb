@@ -14,4 +14,3 @@ Rails::Initializer.run do |config|
   }
   # config.active_record.observers = :cached_category_count_sweeper
 end
-ActionController::Base.session = { :domain => ".thlib.org" }
