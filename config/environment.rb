@@ -7,6 +7,7 @@ require File.join(File.dirname(__FILE__), 'boot')
 
 Rails::Initializer.run do |config|
   # config.gem 'fiveruns_tuneup'
+  config.gem 'after_commit'
   config.plugins = [:acts_as_family_tree, :tiny_mce, :exception_notification, :places_engine, :all ]
   config.action_controller.session = {
     :session_key => 'thl_session',
