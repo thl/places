@@ -6,17 +6,6 @@ APP_URI = 'http://dev.places.thlib.org'
 
 require File.join(File.dirname(__FILE__), 'boot')
 
-if Gem::VERSION >= "1.3.6" 
-module Rails
-class GemDependency
-def requirement
-r = super
-(r == Gem::Requirement.default) ? nil : r
-end
-end
-end
-end
-
 Rails::Initializer.run do |config|
   # config.gem 'fiveruns_tuneup'
   config.gem 'after_commit'
