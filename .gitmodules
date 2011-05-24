@@ -52,3 +52,6 @@
 [submodule "vendor/plugins/universal_navigation"]
 	path = vendor/plugins/universal_navigation
 	url = git://github.com/thl/universal_navigation.git
+[submodule "vendor/plugins/spawn"]
+	path = vendor/plugins/spawn
+	url = git://github.com/tra/spawn.git
