@@ -36,6 +36,9 @@ function ModelSearcher(){
 	// Whether or not a tree (and the accompanying tree link) should be used 
 	this.hasTree = true;
 	
+	// Whether we are building this interface for category selection (editing interface) or searching (public interface)
+	this.searcher = false;
+	
 	// Whether the user can select only one category from the tree (if present) or select multiple categories
 	this.singleSelectionTree = false;
 	
@@ -60,11 +63,11 @@ function ModelSearcher(){
 	// See the attribute documentation above for explanations of these arguments
 	this.init = function(divId, listService, treeService, options){
 		var that = this,
-			root_topics = document.getElementById('root_topics'),
-			$tRem = jQuery('.tree-remove');
+			root_topics = document.getElementById('root_topics');
 
 		this.listService = listService;
 		this.treeService = treeService;
+		if(typeof(options.searcher) != "undefined")				{ this.searcher = options.searcher; }		
 		if(typeof(options.fieldName) != "undefined")			{ this.fieldName = options.fieldName; }
 		if(typeof(options.fieldLabel) != "undefined")			{ this.fieldLabel = options.fieldLabel; }
 		if(typeof(options.selectedObjects) != "undefined")		{ this.selectedObjects = options.selectedObjects; }
@@ -73,12 +76,12 @@ function ModelSearcher(){
 		if(typeof(options.proxy) != "undefined")				{ this.proxy = options.proxy; }
 		this.divId = divId;
 		this.div = jQuery('#'+divId);
+		this.tRem = jQuery('.tree-remove', this.div);
 		if ( this.fieldLabel.indexOf('Feature Type') > -1 ) {
 			this.div.html(
 						(this.fieldLabel ? '<label for="'+this.fieldName+'">'+this.fieldLabel+'</label>' : '')+
 						'<input type="text" name="searcher_autocomplete" id="searcher_autocomplete" style="'+this.fieldStyle+'" />'+
-						'<input type="hidden" name="'+this.fieldName+'" id="searcher_id_input" />'
-					);
+						'<input type="hidden" name="'+this.fieldName+'" id="searcher_id_input" />');
 		}
 		this.autocompleteInput = jQuery('#searcher_autocomplete');
 		this.hiddenIdInput = jQuery('#searcher_id_input');
@@ -99,7 +102,7 @@ function ModelSearcher(){
 				formatItem: that.autocompleteFormatItem,
 				formatMatch: that.autocompleteFormatMatch,
 				formatResult: that.autocompleteFormatItem,
-				multiple: ( this.getctx == 'kmaps' ? true : false )
+				multiple: !this.searcher
 			});
 			that.autocompleteInput.result(that.autocompleteCallback);
 			that.objectList = {};
@@ -114,7 +117,7 @@ function ModelSearcher(){
 		if(this.hasTree){
 			this.treePopupId = this.divId+"_model_searcher_tree_popup";
 			this.treeLoading = this.div.find('.tree-loading');
-			if ( this.fieldLabel.indexOf('Feature Type') > -1 ) {
+			if ( this.searcher ) {
 				this.div.append('<br />Input type above or <a href="#" class="tree-link">select from tree</a>'+
 								'<span class="tree-names"></span> <a href="#" class="tree-remove">(remove)</a><span class="tree-loading" style="float:right;"></span>');
 				this.treeLink = this.div.find('.tree-link');
@@ -128,6 +131,7 @@ function ModelSearcher(){
 					return false;
 				});
 				this.treeLink.click(function(){
+					jQuery('.draggable-popup').hide();
 					if(thisModelSearcher.treeLoaded){
 	 					jQuery('#'+thisModelSearcher.treePopupId).show();
 	 				}else{
@@ -146,8 +150,8 @@ function ModelSearcher(){
 			}
 		}
 		
-		$tRem.unbind('click'); // this and below have to be separate because live can't be chained
-		$tRem.live('click', function(){
+		this.tRem.unbind('click'); // this and below have to be separate because live can't be chained
+		this.tRem.live('click', function(){
 			var $selection = jQuery(this).closest('.tree-names'),
 				$target = $selection.siblings().length ? $selection : $selection.closest('tr');
 			
@@ -166,15 +170,8 @@ function ModelSearcher(){
 		if ( root_topics && root_topics.value != 'All' ) jQuery('#browse_link').unbind('click').show().click(function(){that.activatePopup()});
 	};
 	
-	this.getctx = function() {
-		if ( !this.ctx ) {
-			this.ctx = ( document.getElementById('root_topics') ? 'kmaps' : 'features' );
-		}
-		return this.ctx;
-	}
-	
 	this.activatePopup = function() {
-		var thisModelSearcher = this;
+		var that = this;
 		if(window['activeTree'] == this.treeService ){
 			jQuery('#'+this.treePopupId).show();
 		}else{
@@ -183,11 +180,11 @@ function ModelSearcher(){
 								$test.show() :
 								jQuery("<img id='tree-loader-img' src='/images/loading.gif' align='right' />").insertAfter('#browse_link');
 			jQuery.getJSON(this.treeService, function(data){
-				thisModelSearcher.treeHtml = thisModelSearcher.createTreeFromArray(data.category ? data.category.categories : data.categories);
-				thisModelSearcher.loadPopup();
-				thisModelSearcher.treeHtml = null;
+				that.treeHtml = that.createTreeFromArray(data.category ? data.category.categories : data.categories);
+				that.loadPopup();
+				that.treeHtml = null;
 				data = null;
-				window['activeTree'] = thisModelSearcher.treeService;
+				window['activeTree'] = that.treeService;
 				$img.hide();
 			});
 		}
@@ -219,32 +216,31 @@ function ModelSearcher(){
 			;
 		that.treePopup.setContent(content);
 		that.treePopup.div.checkTree({ onExpand: function( $parent ) {$parent.siblings().find('.expanded').click()}});
-		that.treePopup.div
-			.find('form:first').submit(function(){
-				var ids = [];
-				var names = [];
+		that.treePopup.div.find('form:first').submit(function(){
+			var ids = [];
+			var names = [];
 
-				jQuery(this).find(':checkbox:checked').each(function(){
-					var $label = jQuery(this).siblings('label');
-					var label_name = $label.attr('name');
-					if(label_name.indexOf('record_') == 0){
-						ids.push(label_name.substring(7));
-						names.push($label.html());
-					}
-				});
-				if (ids.length) {
-					if ( that.fieldLabel.indexOf('Feature Type') == -1 ) {
-						that.addValue( ids );
-					} else {
-						that.hiddenIdInput.val(ids.join(','));
-						that.autocompleteInput.val('');
-						that.treeNames.html(':<br />'+names.join(', '));
-						that.treeRemove.show();
-					}
+			jQuery(this).find(':checkbox:checked').each(function(){
+				var $label = jQuery(this).siblings('label');
+				var label_name = $label.attr('name');
+				if(label_name.indexOf('record_') == 0){
+					ids.push(label_name.substring(7));
+					names.push($label.html());
 				}
-				jQuery('#'+that.treePopupId).hide();
-				return false;
 			});
+			if (ids.length) {
+				if ( that.fieldLabel.indexOf('Feature Type') == -1 ) {
+					that.addValue( ids );
+				} else {
+					that.hiddenIdInput.val(ids.join(','));
+					that.autocompleteInput.val('');
+					that.treeNames.html(':<br />'+names.join(', '));
+					that.treeRemove.show();
+				}
+			}
+			jQuery('#'+that.treePopupId).hide();
+			return false;
+		});
 
 		// For large trees, keeping this in memory can cause performance issues, so we'll set it to null
 		// and use thisModelSearcher.treePopupId when we need it.
@@ -256,7 +252,6 @@ function ModelSearcher(){
 			i,
 			names = [],
 			ids = ids || [],
-			ctx = this.getctx(),
 			test = document.getElementById(that.bRowID),
 			$bRow = test ? $(test) : jQuery("<tr><td></td><td colspan='2' style='padding-top:1px; padding-bottom:4px' id='" + that.bRowID + "'></td></tr>").insertAfter(jQuery(that.cRowSelector)).find('#' + that.bRowID);
 
@@ -270,9 +265,9 @@ function ModelSearcher(){
 				);
 			}
 		}
-		that.hiddenIdInput[0].value += ( ctx == 'kmaps' ? ',' : '') + ids.join(',');
+		that.hiddenIdInput[0].value += ( this.searcher ? '' : ',') + ids.join(',');
 		$bRow.append(names.join(''));
-		if (ctx == 'kmaps') that.autocompleteInput.val('');
+		if (!this.searcher) that.autocompleteInput.val('');
 		this.checkAnnotationState();
 	}
 	
