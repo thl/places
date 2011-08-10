@@ -72,3 +72,5 @@ ul.tree li .half_checked {
 .single_selection_tree .checkbox {
 	display: none;
 }
+
+.mobj td { padding: 5px; font-family: verdana, arial, sans-serif; color:#404040; font-size:9pt;}
