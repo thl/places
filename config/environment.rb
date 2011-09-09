@@ -1,4 +1,4 @@
-RAILS_GEM_VERSION = '2.3.4' unless defined? RAILS_GEM_VERSION
+RAILS_GEM_VERSION = '2.3.8' unless defined? RAILS_GEM_VERSION
 
 APP_DOMAIN = "places.thlib.org"
 APP_NAME = "THL Places"
