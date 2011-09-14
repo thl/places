@@ -110,9 +110,9 @@ var frame_service = {
 			var arg = "parent_url=" + parent_url,
                 pieces = href.split('#'),
                 newarg = ( href.indexOf('?') > -1 ? '&' : '?' ) + arg + ( href.indexOf('#') > -1 ? '#' : ''),
-			    href = ( pieces.length > 1 ? pieces.join(newarg) : pieces[0] + newarg);
+			    newlink = ( pieces.length > 1 ? pieces.join(newarg) : pieces[0] + newarg);
 		}
-		return href;
+		return newlink || href;
 	},
 
 	hide_stuff: function() {
@@ -127,7 +127,7 @@ var frame_service = {
 		var service_hostname = window.location.hostname;
 		var h = '';
 		if(service_hostname.indexOf('localhost') == 0){
-			h = 'dev.thlib.org';
+			h = 'localhost:90';
 		} else if(service_hostname.indexOf('dev') == 0){
 			h = 'dev.thlib.org';
 		} else{
