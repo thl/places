@@ -226,6 +226,11 @@ quandu_production:
   app_name: Places Dictionary (Quandu Production)
   monitor_mode: true
 
+quandu_staging:
+  <<: *default_settings
+  app_name: Places Dictionary (Quandu Staging)
+  monitor_mode: true
+
 # Many applications have a staging environment which behaves
 # identically to production.  Support for that environment is provided
 # here.  By default, the staging environment has the agent turned on.
