@@ -55,6 +55,7 @@ fieldset {
 fieldset div {margin-top: 6px;}
 
 fieldset div.row p {font-size: 100%;}
+fieldset div.row ol,fieldset div.row ul  {list-style-type:square;}
 emph:before {
     font-style: italic;
     content: "{emph markup} "
