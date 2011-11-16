@@ -218,7 +218,7 @@ test:
 # incurring any user-visible performance degradation.
 production:
   <<: *default_settings
-  app_name: Places Dictionary (Production)
+  app_name: Places Dictionary (Local)
   monitor_mode: true
 
 quandu_production:
