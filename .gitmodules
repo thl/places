@@ -13,9 +13,6 @@
 [submodule "vendor/plugins/restful-authentication"]
 	path = vendor/plugins/restful-authentication
 	url = git://github.com/technoweenie/restful-authentication.git
-[submodule "vendor/plugins/spatial_adapter"]
-	path = vendor/plugins/spatial_adapter
-	url = git://github.com/amontano/spatial_adapter.git
 [submodule "vendor/plugins/tiny_mce"]
 	path = vendor/plugins/tiny_mce
 	url = git://github.com/kete/tiny_mce.git
@@ -61,3 +58,9 @@
 [submodule "vendor/plugins/newrelic_rpm"]
 	path = vendor/plugins/newrelic_rpm
 	url = git://github.com/newrelic/rpm.git
+[submodule "vendor/plugins/open_id_authentication"]
+	path = vendor/plugins/open_id_authentication
+	url = git://github.com/rails/open_id_authentication.git
+[submodule "vendor/plugins/authenticated_system"]
+	path = vendor/plugins/authenticated_system
+	url = git://github.com/thl/authenticated_system.git
