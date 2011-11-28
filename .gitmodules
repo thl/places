@@ -64,3 +64,6 @@
 [submodule "vendor/plugins/authenticated_system"]
 	path = vendor/plugins/authenticated_system
 	url = git://github.com/thl/authenticated_system.git
+[submodule "vendor/plugins/spatial_adapter"]
+	path = vendor/plugins/spatial_adapter
+	url = git://github.com/fragility/spatial_adapter.git
