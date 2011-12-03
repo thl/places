@@ -1,8 +1,9 @@
 .DS_Store
 *.tmproj
+*.csv
+secret.txt
 config/database.yml
 config/environments/quandu_*.rb
 doc/plugins/*
 public/javascripts/tiny_mce
-*.csv
 public/features
