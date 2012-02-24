@@ -63,7 +63,7 @@ module MM::Acts::FamilyTree::AncestorsAndDescendants
     def ancestors(*args)
       return [] if self.ancestor_ids.blank?
       conditions=[[]]
-      ids = self.ancestor_ids.split('.').delete_if{|c|c.empty?}
+      ids = self.ancestor_ids.split('.').delete_if(&:blank?)
       ids.each do |id|
         conditions[0] << "#{self.class.table_name}.id = ?"
         conditions << id
