@@ -56,7 +56,7 @@ module MM::Acts::FamilyTree::Node
     def all_parents
       parents_a = []
       p = parent
-      while(!p.nil?)
+      until p.nil? || parents_a.include?(p)
         parents_a << p
         p = p.parent
       end
