@@ -2,7 +2,7 @@
 *.tmproj
 *.csv
 secret.txt
-config/database.yml
+config/*.yml
 config/environments/quandu_*.rb
 config/environments/bleak_house.rb
 doc/plugins/*
