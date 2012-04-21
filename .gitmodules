@@ -4,18 +4,6 @@
 [submodule "vendor/plugins/exception_notification"]
 	path = vendor/plugins/exception_notification
 	url = git://github.com/rails/exception_notification.git
-[submodule "vendor/plugins/jrails"]
-	path = vendor/plugins/jrails
-	url = git://github.com/aaronchi/jrails.git
-[submodule "vendor/plugins/resource_controller"]
-	path = vendor/plugins/resource_controller
-	url = git://github.com/jamesgolick/resource_controller.git
-[submodule "vendor/plugins/restful-authentication"]
-	path = vendor/plugins/restful-authentication
-	url = git://github.com/technoweenie/restful-authentication.git
-[submodule "vendor/plugins/tiny_mce"]
-	path = vendor/plugins/tiny_mce
-	url = git://github.com/kete/tiny_mce.git
 [submodule "vendor/plugins/kmaps_integration"]
 	path = vendor/plugins/kmaps_integration
 	url = git://github.com/thl/kmaps_integration.git
@@ -64,6 +52,9 @@
 [submodule "vendor/plugins/authenticated_system"]
 	path = vendor/plugins/authenticated_system
 	url = git://github.com/thl/authenticated_system.git
-[submodule "vendor/plugins/spatial_adapter"]
-	path = vendor/plugins/spatial_adapter
-	url = git://github.com/fragility/spatial_adapter.git
+[submodule "vendor/plugins/restful-authentication"]
+	path = vendor/plugins/restful-authentication
+	url = git://github.com/Satish/restful-authentication.git
+[submodule "vendor/plugins/resource_controller"]
+	path = vendor/plugins/resource_controller
+	url = git://github.com/makandra/resource_controller.git

@@ -30,13 +30,13 @@ module MM::Acts::FamilyTree::Tree
     # Don't rely on this to get root *nodes* though...
     # A root node may NOT have a relationship (child-less)
     #
-    def roots(*args)
+    def roots
       #return find_by_sql("select a.* from #{table_name} as a left join #{table_name} b on a.parent_node_id = b.child_node_id where b.child_node_id IS NULL")
-      conditions=['b.child_node_id IS NULL']
-      joins="LEFT JOIN #{table_name} b ON #{table_name}.parent_node_id = b.child_node_id"
-      with_scope(:find=>{:conditions=>conditions, :joins=>joins, :select=>'#{table_name}.*', :from=>"#{table_name} #{table_name}"}) do
-        find(:all, *args)
-      end
+      joins("LEFT JOIN #{table_name} b ON #{table_name}.parent_node_id = b.child_node_id").where('b.child_node_id IS NULL')
+      #.from("#{table_name} #{table_name}")
+      #with_scope(:find=>{:conditions=>conditions, :joins=>joins, :select=>'#{table_name}.*', :from=>"#{table_name} #{table_name}"}) do
+      #  find(:all, *args)
+      #end
     end
     
   end
@@ -63,44 +63,39 @@ module MM::Acts::FamilyTree::Tree
     # Parent *relations* finder (relations that have their child_node_id set to this parent_node_id)
     # Tree.find_parents(:all, :conditions=>[])
     #
-    def find_parents(*args)
-      self.class.send(:with_scope, :find=>{:conditions=>['child_node_id=?', self.parent_node_id]}) do
-        self.class.find(*args)
-      end
+    def find_parents
+      self.class.where(:child_node_id => self.parent_node_id)
     end
     
     #
     # find all parent relations
     #
-    def parents(*args)
-      find_parents(:all, *args)
+    def parents
+      find_parents
     end
     
     #
     # Returns first parent
     #
-    def parent(*args)
-      find_parents(:first, *args)
+    def parent
+      find_parents.first
     end
     
     #
     # Children *relations* finder (relations that have their parent_node_id set to this child_node_id)
     # Tree.find_children(:conditions=>[])
     #
-    def children(*args)
-      self.class.send(:with_scope, :find=>{:conditions=>['parent_node_id=?', self.child_node_id]}) do
-        self.class.find(:all, *args)
-      end
+    def children
+      debugger
+      self.class.where(:parent_node_id => self.child_node_id)
     end
     
     #
     # Sibling *relations* finder (relations that have their parent_node_id set to this child_node_id)
     # Tree.find_children(:conditions=>[])
     #
-    def siblings(*args)
-      self.class.send(:with_scope, :find=>{:conditions=>['parent_node_id=? OR child_node_id=?', self.parent_node_id, self.child_node_id]}) do
-        self.class.find(:all, *args) - [self]
-      end
+    def siblings
+      self.class.where(['id != ? AND (parent_node_id=? OR child_node_id=?)', self.id, self.parent_node_id, self.child_node_id])
     end
     
   end

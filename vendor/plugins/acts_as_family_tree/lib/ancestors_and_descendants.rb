@@ -48,11 +48,8 @@ module MM::Acts::FamilyTree::AncestorsAndDescendants
     # can pass in a hash with the standard find params (:conditions, :joins, :include etc.)
     # ModelTree.find(1).descendants(:include=>[:names])
     #
-    def descendants(*args)
-      conditions = [self.class.table_name + '.ancestor_ids LIKE ?', "%.#{self.id}.%"]
-      self.class.send(:with_scope, :find=>{:conditions=>conditions}) do
-        self.class.find(:all, *args)
-      end
+    def descendants
+      self.class.where([self.class.table_name + '.ancestor_ids LIKE ?', "%.#{self.id}.%"])
     end
     
     #
@@ -60,7 +57,7 @@ module MM::Acts::FamilyTree::AncestorsAndDescendants
     # can pass in a hash with the standard find params (:conditions, :joins, :include etc.)
     # ModelTree.find(5).ancestors(:include=>[:names])
     #
-    def ancestors(*args)
+    def ancestors
       return [] if self.ancestor_ids.blank?
       conditions=[[]]
       ids = self.ancestor_ids.split('.').delete_if(&:blank?)
@@ -69,9 +66,7 @@ module MM::Acts::FamilyTree::AncestorsAndDescendants
         conditions << id
       end
       conditions[0]=conditions[0].join(' OR ')
-      self.class.send(:with_scope, :find=>{:conditions=>conditions}) do
-        self.class.find(:all, *args)
-      end
+      self.class.where(conditions)
     end
 
     #

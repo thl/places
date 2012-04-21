@@ -33,14 +33,13 @@ module MM::Acts::FamilyTree::Node
         #
         # Returns all root nodes
         #
-        def self.roots(*args)
-          conditions=['b.child_node_id IS NULL']
-          joins = " LEFT JOIN #{relation_table} b ON b.child_node_id = #{table_name}.id "
-          with_scope(:find=>{:conditions=>conditions, :joins=>joins, :select=>'#{table_name}.*', :from=>"#{table_name} #{table_name}"}) do
-            find(:all, *args)
-          end
+        def self.roots
+          joins("LEFT JOIN #{relation_table} b ON b.child_node_id = #{table_name}.id").where('b.child_node_id IS NULL')
+          #.from("#{table_name} #{table_name}")
+          #  with_scope(:find=>{:conditions=>conditions, :joins=>joins, :select=>'#{table_name}.*', :from=>"#{table_name} #{table_name}"}) do
+          #    find(:all, *args)
+          #  end
         end
-        
       EOV
     end
     
