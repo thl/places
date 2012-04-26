@@ -86,7 +86,6 @@ module MM::Acts::FamilyTree::Tree
     # Tree.find_children(:conditions=>[])
     #
     def children
-      debugger
       self.class.where(:parent_node_id => self.child_node_id)
     end
     
