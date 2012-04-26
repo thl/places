@@ -58,3 +58,6 @@
 [submodule "vendor/plugins/resource_controller"]
 	path = vendor/plugins/resource_controller
 	url = git://github.com/makandra/resource_controller.git
+[submodule "vendor/plugins/rails_upgrade"]
+	path = vendor/plugins/rails_upgrade
+	url = git://github.com/amontano/rails_upgrade.git
