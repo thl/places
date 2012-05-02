@@ -6,7 +6,7 @@ gem 'rails', '3.0.12'
 gem 'pg'
 # gem 'postgres-pr'
 gem 'hpricot', '>= 0.8.6'
-gem 'rack-openid', '1.1.2', :require => 'rack/openid'
+gem 'rack-openid', :require => 'rack/openid'
 gem 'will_paginate', '~> 3.0'
 gem 'georuby'
 gem 'jquery-rails', '>= 1.0.12'
@@ -15,6 +15,7 @@ gem 'tiny_mce'
 gem 'memcache-client'
 gem 'newrelic_rpm'
 gem 'exception_notification'
+gem 'open_id_authentication'
 
 # To use debugger (ruby-debug for Ruby 1.8.7+, ruby-debug19 for Ruby 1.9.2+)
 group :development do
