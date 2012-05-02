@@ -14,6 +14,7 @@ gem 'spatial_adapter'
 gem 'tiny_mce'
 gem 'memcache-client'
 gem 'newrelic_rpm'
+gem 'exception_notification'
 
 # To use debugger (ruby-debug for Ruby 1.8.7+, ruby-debug19 for Ruby 1.9.2+)
 group :development do

@@ -36,6 +36,8 @@ GEM
     daemons (1.1.4)
     erubis (2.6.6)
       abstract (>= 1.0.0)
+    exception_notification (2.6.1)
+      actionmailer (>= 3.0.4)
     fastthread (1.0.7)
     gem_plugin (0.2.3)
     georuby (1.9.7)
@@ -107,6 +109,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  exception_notification
   georuby
   hpricot (>= 0.8.6)
   jquery-rails (>= 1.0.12)
