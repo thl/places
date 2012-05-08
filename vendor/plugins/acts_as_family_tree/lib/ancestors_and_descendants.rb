@@ -72,13 +72,13 @@ module MM::Acts::FamilyTree::AncestorsAndDescendants
     #
     # Ancestor *relations* finder (not recursive anymore) - no need to use ancestor_ids
     #
-    def ancestors_r(*args)
+    def ancestors_r
       # fetch all parents
       pending = [self]
       ans = []
       while !pending.empty?
         e = pending.pop
-        e.parents(*args).each do |p|
+        e.parents.each do |p|
           if !ans.include?(p)
             ans << p
             pending.push(p)
@@ -91,12 +91,12 @@ module MM::Acts::FamilyTree::AncestorsAndDescendants
     #
     # Descendant *relations* finder (recursive!) - no need to use ancestor_ids
     #
-    def descendants_r(*args)
+    def descendants_r
       pending = [self]
       des = []
       while !pending.empty?
         e = pending.pop
-        e.children(*args).each do |c|
+        e.children.each do |c|
           if !des.include?(c)
             des << c
             pending.push(c)

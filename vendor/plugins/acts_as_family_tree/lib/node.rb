@@ -62,25 +62,25 @@ module MM::Acts::FamilyTree::Node
       parents_a.reverse
     end
     
-    def parent(*args)
-      parents.find(:first, *args)
+    def parent
+      parents.first
     end
     
     #
     # Find parent and/or child *relations*
     #
-    def relations(*args)
-      parent_relations.find(:all, *args) + child_relations.find(:all, *args)
+    def relations
+      parent_relations.all + child_relations.all
     end
     
     #
     # Find siblings
     #
-    def siblings(*args)
+    def siblings
       p = parents
-      return (self.class.roots(*args) - [self]) if p.empty?
+      return (self.class.roots - [self]) if p.empty?
       p.collect do |parent|
-        parent.children(*args)
+        parent.children
       end.flatten.uniq - [self]
     end
     
