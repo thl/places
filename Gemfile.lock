@@ -34,6 +34,7 @@ GEM
     cgi_multipart_eof_fix (2.5.0)
     columnize (0.3.6)
     daemons (1.1.8)
+    dynamic_form (1.1.4)
     erubis (2.6.6)
       abstract (>= 1.0.0)
     exception_notification (2.6.1)
@@ -113,6 +114,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  dynamic_form
   exception_notification
   georuby
   hpricot (>= 0.8.6)
