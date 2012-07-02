@@ -104,9 +104,10 @@ var InsetMap = {
 	
 		InsetMap.map = new OpenLayers.Map('inset_map', mapOptions);
 	
-		InsetMap.map.addControl(new OpenLayers.Control.MouseDefaults({
+		/* This was deprecated. Not available in newer version.
+		InsetMap.map.addControl(new OpenLayers.Control.Navigation({
 			title:'Drag to pan, double-click to zoom in'
-		}));
+		}));*/
 	
 		InsetMap.map.addControl(new OpenLayers.Control.PanZoom());
 		
