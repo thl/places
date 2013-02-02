@@ -1,9 +1,0 @@
-[submodule "vendor/plugins/places_engine"]
-	path = vendor/plugins/places_engine
-	url = git://github.com/thl/places_engine.git
-[submodule "vendor/plugins/interface_utils"]
-	path = vendor/plugins/interface_utils
-	url = git://github.com/thl/interface_utils.git
-[submodule "vendor/plugins/complex_dates"]
-	path = vendor/plugins/complex_dates
-	url = git://github.com/thl/complex_dates.git
