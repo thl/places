@@ -99,6 +99,14 @@ GIT
       rails (~> 3.2.8)
 
 GIT
+  remote: git://github.com/thl/places_engine.git
+  revision: 7915a1c9cc75b8161914c47f24eb29e1b64fcd7d
+  tag: v2.0.2
+  specs:
+    places_engine (2.0.2)
+      rails (~> 3.2.11)
+
+GIT
   remote: git://github.com/thl/proxy_engine.git
   revision: c22e11eb18af58a0c1632de0cc8ae76e5e0e1abd
   tag: v2.0.0
@@ -121,12 +129,6 @@ GIT
   specs:
     universal_navigation (2.0.2)
       rails (~> 3.2.8)
-
-PATH
-  remote: ../engines/places_engine
-  specs:
-    places_engine (2.0.2)
-      rails (~> 3.2.11)
 
 GEM
   remote: http://rubygems.org/
