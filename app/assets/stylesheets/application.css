@@ -9,8 +9,6 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require places_engine/application
- *= require authenticated_system/application
  *= require thl_integration/application
- *= require complex_scripts/application
  *= require universal_navigation/application
  */

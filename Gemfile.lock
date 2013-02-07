@@ -99,14 +99,6 @@ GIT
       rails (~> 3.2.8)
 
 GIT
-  remote: git://github.com/thl/places_engine.git
-  revision: 1594a674d802f108dd7838c0222f848a102bc2df
-  tag: v2.0.1
-  specs:
-    places_engine (2.0.1)
-      rails (~> 3.2.11)
-
-GIT
   remote: git://github.com/thl/proxy_engine.git
   revision: c22e11eb18af58a0c1632de0cc8ae76e5e0e1abd
   tag: v2.0.0
@@ -129,6 +121,12 @@ GIT
   specs:
     universal_navigation (2.0.2)
       rails (~> 3.2.8)
+
+PATH
+  remote: ../engines/places_engine
+  specs:
+    places_engine (2.0.2)
+      rails (~> 3.2.11)
 
 GEM
   remote: http://rubygems.org/
@@ -325,7 +323,7 @@ DEPENDENCIES
   open_id_authentication
   passiverecord (= 0.2)!
   pg
-  places_engine (= 2.0.1)!
+  places_engine (= 2.0.2)!
   proxy_engine (= 2.0.0)!
   rack-openid
   rails (= 3.2.11)
