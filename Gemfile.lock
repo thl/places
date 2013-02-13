@@ -27,10 +27,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/active_resource_extensions.git
-  revision: 3ebbfdc93c56dac101a72bc17376169862f01d3e
-  tag: v2.0.0
+  revision: 27a01a973f3fbf4d43b5e44ccf76d0ba13fd12d3
+  tag: v2.0.1
   specs:
-    active_resource_extensions (2.0.0)
+    active_resource_extensions (2.0.1)
       rails (~> 3.2.8)
 
 GIT
@@ -59,19 +59,19 @@ GIT
 
 GIT
   remote: git://github.com/thl/complex_scripts.git
-  revision: ef26152b095945346d245feab0bced4c26e7837e
-  tag: v2.0.3
+  revision: 75f33cea7824f0f69c485065413d38a391c259b0
+  tag: v2.0.4
   specs:
-    complex_scripts (2.0.3)
+    complex_scripts (2.0.4)
       passiverecord (= 0.2)
       rails (~> 3.2.8)
 
 GIT
   remote: git://github.com/thl/dictionary_integration.git
-  revision: 53712a2d49ad1fa1f1bc9410ea3f9f580ad3cf36
-  tag: v2.0.0
+  revision: 82e543c5700f6ec3cab5146ead06d32ac6635a98
+  tag: v2.0.1
   specs:
-    dictionary_integration (2.0.0)
+    dictionary_integration (2.0.1)
       rails (~> 3.2.9)
 
 GIT
@@ -84,10 +84,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/kmaps_integration.git
-  revision: b415f9adba21bb70a8812c31662e10777e6efe38
-  tag: v2.0.4
+  revision: 994f8a1cb2091358891efd6f61ad9564c274bf9c
+  tag: v2.0.5
   specs:
-    kmaps_integration (2.0.4)
+    kmaps_integration (2.0.5)
       rails (~> 3.2.9)
 
 GIT
@@ -100,10 +100,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/places_engine.git
-  revision: 7915a1c9cc75b8161914c47f24eb29e1b64fcd7d
-  tag: v2.0.2
+  revision: 6fb094b508ae0c48fed07f6cb064d924edd48f46
+  tag: v2.0.3
   specs:
-    places_engine (2.0.2)
+    places_engine (2.0.3)
       rails (~> 3.2.11)
 
 GIT
@@ -301,14 +301,14 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  active_resource_extensions (= 2.0.0)!
+  active_resource_extensions (= 2.0.1)!
   acts_as_family_tree (= 1.0.1)!
   annotate
   authenticated_system (= 2.0.9)!
   coffee-rails (~> 3.2.1)
   complex_dates (= 2.0.0)!
-  complex_scripts (= 2.0.3)!
-  dictionary_integration (= 2.0.0)!
+  complex_scripts (= 2.0.4)!
+  dictionary_integration (= 2.0.1)!
   dynamic_form
   exception_notification
   georuby
@@ -316,7 +316,7 @@ DEPENDENCIES
   interface_utils (= 2.0.0)!
   jquery-rails
   json
-  kmaps_integration (= 2.0.4)!
+  kmaps_integration (= 2.0.5)!
   makandra_resource_controller
   memcache-client
   mms_integration (= 2.0.1)!
@@ -325,7 +325,7 @@ DEPENDENCIES
   open_id_authentication
   passiverecord (= 0.2)!
   pg
-  places_engine (= 2.0.2)!
+  places_engine (= 2.0.3)!
   proxy_engine (= 2.0.0)!
   rack-openid
   rails (= 3.2.11)
