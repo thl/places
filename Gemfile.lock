@@ -100,10 +100,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/places_engine.git
-  revision: 6fb094b508ae0c48fed07f6cb064d924edd48f46
-  tag: v2.0.3
+  revision: 6606aac49ac2e48913b04ade2c55bd4ee2567c7b
+  tag: v2.0.4
   specs:
-    places_engine (2.0.3)
+    places_engine (2.0.4)
       rails (~> 3.2.11)
 
 GIT
@@ -124,10 +124,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/universal_navigation.git
-  revision: c49a3029c9c30c145c62dbc012cda8ad5b8401e9
-  tag: v2.0.2
+  revision: d02e7b9d6f682f21527fa759107227586395245b
+  tag: v2.0.3
   specs:
-    universal_navigation (2.0.2)
+    universal_navigation (2.0.3)
       rails (~> 3.2.8)
 
 GEM
@@ -325,7 +325,7 @@ DEPENDENCIES
   open_id_authentication
   passiverecord (= 0.2)!
   pg
-  places_engine (= 2.0.3)!
+  places_engine (= 2.0.4)!
   proxy_engine (= 2.0.0)!
   rack-openid
   rails (= 3.2.11)
@@ -339,5 +339,5 @@ DEPENDENCIES
   thl_integration (= 2.0.5)!
   tinymce-rails (= 3.5.6)
   uglifier (>= 1.0.3)
-  universal_navigation (= 2.0.2)!
+  universal_navigation (= 2.0.3)!
   will_paginate (~> 3.0)

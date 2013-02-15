@@ -12,5 +12,5 @@
 //
 //
 //= require places_engine/application
-//= require universal_navigation/application
 //= require thl_integration/application
+//= require universal_navigation/application
