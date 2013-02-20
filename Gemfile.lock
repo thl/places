@@ -92,10 +92,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/mms_integration.git
-  revision: e10424bb3ad2ed6184cf833c2b29395f6ef3aa6b
-  tag: v2.0.2
+  revision: 3210dd03001bc852525226fe2b145ba04e25ba2a
+  tag: v2.0.3
   specs:
-    mms_integration (2.0.2)
+    mms_integration (2.0.3)
       rails (~> 3.2.8)
 
 GIT
@@ -319,7 +319,7 @@ DEPENDENCIES
   kmaps_integration (= 2.0.6)!
   makandra_resource_controller
   memcache-client
-  mms_integration (= 2.0.2)!
+  mms_integration (= 2.0.3)!
   mongrel
   newrelic_rpm
   open_id_authentication
