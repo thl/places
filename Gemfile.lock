@@ -51,10 +51,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/complex_dates.git
-  revision: 63b3147f434ed8530f1af476a686829b365afeb5
-  tag: v2.0.0
+  revision: 24c4d780b3c884f9721684d56061e47f81cc0147
+  tag: v2.0.1
   specs:
-    complex_dates (2.0.0)
+    complex_dates (2.0.1)
       rails (~> 3.2.11)
 
 GIT
@@ -100,10 +100,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/places_engine.git
-  revision: 2fa8dd2d44c624211aeaa646b2e93428f5dcb592
-  tag: v2.1.5
+  revision: 36e553739826795b5dbd094c8c021cc504c4432a
+  tag: v2.1.6
   specs:
-    places_engine (2.1.5)
+    places_engine (2.1.6)
       rails (~> 3.2.11)
 
 GIT
@@ -306,7 +306,7 @@ DEPENDENCIES
   annotate
   authenticated_system (= 2.0.9)!
   coffee-rails (~> 3.2.1)
-  complex_dates (= 2.0.0)!
+  complex_dates (= 2.0.1)!
   complex_scripts (= 2.0.4)!
   dictionary_integration (= 2.0.1)!
   dynamic_form
@@ -326,7 +326,7 @@ DEPENDENCIES
   open_id_authentication
   passiverecord (= 0.2)!
   pg
-  places_engine (= 2.1.5)!
+  places_engine (= 2.1.6)!
   proxy_engine (= 2.0.0)!
   rack-openid
   rails (= 3.2.13)
