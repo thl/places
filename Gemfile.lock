@@ -51,20 +51,28 @@ GIT
 
 GIT
   remote: git://github.com/thl/complex_dates.git
-  revision: 24c4d780b3c884f9721684d56061e47f81cc0147
-  tag: v2.0.1
+  revision: 220d9a529bcdb328e4946232a479bc4afd91f3fd
+  tag: v2.0.2
   specs:
-    complex_dates (2.0.1)
+    complex_dates (2.0.2)
       rails (~> 3.2.11)
 
 GIT
   remote: git://github.com/thl/complex_scripts.git
-  revision: 75f33cea7824f0f69c485065413d38a391c259b0
-  tag: v2.0.4
+  revision: 5fb428926719d60b507e4a36998112f71deb2221
+  tag: v2.0.5
   specs:
-    complex_scripts (2.0.4)
+    complex_scripts (2.0.5)
       passiverecord (= 0.2)
       rails (~> 3.2.8)
+
+GIT
+  remote: git://github.com/thl/cultural_network.git
+  revision: 2c9b761833777de8ee1143b010fa7c0689be5ca0
+  tag: v0.9.1
+  specs:
+    cultural_network (0.9.1)
+      rails (~> 3.2.13)
 
 GIT
   remote: git://github.com/thl/dictionary_integration.git
@@ -100,10 +108,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/places_engine.git
-  revision: 7f70ce42063d78cd9d77640d0fe244b57b333606
-  tag: v2.1.8
+  revision: 8158ecf8cb635f368e540be6f79183fb3f911177
+  tag: v3.0.0
   specs:
-    places_engine (2.1.8)
+    places_engine (3.0.0)
       rails (~> 3.2.11)
 
 GIT
@@ -306,8 +314,9 @@ DEPENDENCIES
   annotate
   authenticated_system (= 2.0.9)!
   coffee-rails (~> 3.2.1)
-  complex_dates (= 2.0.1)!
-  complex_scripts (= 2.0.4)!
+  complex_dates (= 2.0.2)!
+  complex_scripts (= 2.0.5)!
+  cultural_network (= 0.9.1)!
   dictionary_integration (= 2.0.1)!
   dynamic_form
   exception_notification
@@ -326,7 +335,7 @@ DEPENDENCIES
   open_id_authentication
   passiverecord (= 0.2)!
   pg
-  places_engine (= 2.1.8)!
+  places_engine (= 3.0.0)!
   proxy_engine (= 2.0.0)!
   rack-openid
   rails (= 3.2.13)

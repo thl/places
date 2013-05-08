@@ -11,6 +11,6 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //
-//= require places_engine/application
+//= require cultural_network/application
 //= require thl_integration/application
 //= require universal_navigation/application
