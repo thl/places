@@ -43,10 +43,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/authenticated_system.git
-  revision: b5fa56151316d468b2ba82f333da229dc52be732
-  tag: v2.0.9
+  revision: 328b373de7339f191b27de2bb87bc6bf2d97fee8
+  tag: v2.1.0
   specs:
-    authenticated_system (2.0.9)
+    authenticated_system (2.1.0)
       rails (~> 3.2.8)
 
 GIT
@@ -59,83 +59,83 @@ GIT
 
 GIT
   remote: git://github.com/thl/complex_scripts.git
-  revision: 5fb428926719d60b507e4a36998112f71deb2221
-  tag: v2.0.5
+  revision: a531e71fa205aefa88739d1de8f24ace679fc4f1
+  tag: v2.0.7
   specs:
-    complex_scripts (2.0.5)
+    complex_scripts (2.0.7)
       passiverecord (= 0.2)
       rails (~> 3.2.8)
 
 GIT
   remote: git://github.com/thl/cultural_network.git
-  revision: 2c9b761833777de8ee1143b010fa7c0689be5ca0
-  tag: v0.9.1
+  revision: af29dece8851c66844127e060af4c1ffeaa0e98c
+  tag: v0.9.3
   specs:
-    cultural_network (0.9.1)
+    cultural_network (0.9.3)
       rails (~> 3.2.13)
 
 GIT
   remote: git://github.com/thl/dictionary_integration.git
-  revision: 82e543c5700f6ec3cab5146ead06d32ac6635a98
-  tag: v2.0.1
+  revision: 072a7c3bb46da6b84834e75baa5b9dcbf6832a3b
+  tag: v2.0.2
   specs:
-    dictionary_integration (2.0.1)
+    dictionary_integration (2.0.2)
       rails (~> 3.2.9)
 
 GIT
   remote: git://github.com/thl/interface_utils.git
-  revision: 43d3c7dc1001f249ea8291229ebbe80d5b32b20f
-  tag: v2.0.0
+  revision: 1880ef35da900202bebf96dee496c1e3391a4c65
+  tag: v2.0.2
   specs:
-    interface_utils (2.0.0)
+    interface_utils (2.0.2)
       rails (~> 3.2.11)
 
 GIT
   remote: git://github.com/thl/kmaps_integration.git
-  revision: 0598a0df17f51f7b2b9410c76345a2c312299a4f
-  tag: v2.0.7
+  revision: b8d1b6130afbbef5504585c4eb337b97ffc6aa3b
+  tag: v2.0.8
   specs:
-    kmaps_integration (2.0.7)
+    kmaps_integration (2.0.8)
       rails (~> 3.2.9)
 
 GIT
   remote: git://github.com/thl/mms_integration.git
-  revision: 7cafd52c7bc9600d7b1bc7787f50b5fc42b09b20
-  tag: v2.0.4
+  revision: 556f4318617b2bd52080a56872ee6f23185e92df
+  tag: v2.0.5
   specs:
-    mms_integration (2.0.4)
+    mms_integration (2.0.5)
       rails (~> 3.2.8)
 
 GIT
   remote: git://github.com/thl/places_engine.git
-  revision: 43a41e3fd6ee3dbe355be1587c7ccd53472c7590
-  tag: v3.0.1
+  revision: 81775575457a64fbee45a5cd11184ff3a578ac8f
+  tag: v3.0.4
   specs:
-    places_engine (3.0.1)
+    places_engine (3.0.4)
       rails (~> 3.2.11)
 
 GIT
   remote: git://github.com/thl/proxy_engine.git
-  revision: c22e11eb18af58a0c1632de0cc8ae76e5e0e1abd
-  tag: v2.0.0
+  revision: 0ce77bc3b327701a140a738431bd2cc1f40cf6d2
+  tag: v2.0.1
   specs:
-    proxy_engine (2.0.0)
+    proxy_engine (2.0.1)
       rails (~> 3.2.9)
 
 GIT
   remote: git://github.com/thl/thl_integration.git
-  revision: 917a401dd094a22b46f6f941b2afb0567d411ad8
-  tag: v2.0.5
+  revision: 41a4b6e08970224dbffe470d0896a1d04e8b8790
+  tag: v2.0.6
   specs:
-    thl_integration (2.0.5)
+    thl_integration (2.0.6)
       rails (~> 3.2.8)
 
 GIT
   remote: git://github.com/thl/universal_navigation.git
-  revision: d02e7b9d6f682f21527fa759107227586395245b
-  tag: v2.0.3
+  revision: 4c491f8501c26aca8bb24a232460fc672a9b9daf
+  tag: v2.0.4
   specs:
-    universal_navigation (2.0.3)
+    universal_navigation (2.0.4)
       rails (~> 3.2.8)
 
 GEM
@@ -312,31 +312,31 @@ DEPENDENCIES
   active_resource_extensions (= 2.0.5)!
   acts_as_family_tree (= 1.0.2)!
   annotate
-  authenticated_system (= 2.0.9)!
+  authenticated_system (= 2.1.0)!
   coffee-rails (~> 3.2.1)
   complex_dates (= 2.0.2)!
-  complex_scripts (= 2.0.5)!
-  cultural_network (= 0.9.1)!
-  dictionary_integration (= 2.0.1)!
+  complex_scripts (= 2.0.7)!
+  cultural_network (= 0.9.3)!
+  dictionary_integration (= 2.0.2)!
   dynamic_form
   exception_notification
   georuby
   hpricot (>= 0.8.6)
-  interface_utils (= 2.0.0)!
+  interface_utils (= 2.0.2)!
   jquery-rails
   json
-  kmaps_integration (= 2.0.7)!
+  kmaps_integration (= 2.0.8)!
   libv8 (= 3.3.10.2)
   makandra_resource_controller
   memcache-client
-  mms_integration (= 2.0.4)!
+  mms_integration (= 2.0.5)!
   mongrel
   newrelic_rpm
   open_id_authentication
   passiverecord (= 0.2)!
   pg
-  places_engine (= 3.0.1)!
-  proxy_engine (= 2.0.0)!
+  places_engine (= 3.0.4)!
+  proxy_engine (= 2.0.1)!
   rack-openid
   rails (= 3.2.13)
   restful-authentication (= 2.0.0.beta1)!
@@ -346,8 +346,8 @@ DEPENDENCIES
   spawn (= 1.0.1)!
   system_timer
   therubyracer
-  thl_integration (= 2.0.5)!
+  thl_integration (= 2.0.6)!
   tinymce-rails (= 3.5.6)
   uglifier (>= 1.0.3)
-  universal_navigation (= 2.0.3)!
+  universal_navigation (= 2.0.4)!
   will_paginate (~> 3.0)
