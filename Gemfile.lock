@@ -68,10 +68,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/cultural_network.git
-  revision: af29dece8851c66844127e060af4c1ffeaa0e98c
-  tag: v0.9.3
+  revision: 7e2e20fad01b325c18d92c156e86dedba9fc528f
+  tag: v0.9.4
   specs:
-    cultural_network (0.9.3)
+    cultural_network (0.9.4)
       rails (~> 3.2.13)
 
 GIT
@@ -108,10 +108,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/places_engine.git
-  revision: 81775575457a64fbee45a5cd11184ff3a578ac8f
-  tag: v3.0.4
+  revision: 0eef080f64fedc9550ffa8eb346cafdfc4fe1bd0
+  tag: v3.0.5
   specs:
-    places_engine (3.0.4)
+    places_engine (3.0.5)
       rails (~> 3.2.11)
 
 GIT
@@ -316,7 +316,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   complex_dates (= 2.0.2)!
   complex_scripts (= 2.0.7)!
-  cultural_network (= 0.9.3)!
+  cultural_network (= 0.9.4)!
   dictionary_integration (= 2.0.2)!
   dynamic_form
   exception_notification
@@ -335,7 +335,7 @@ DEPENDENCIES
   open_id_authentication
   passiverecord (= 0.2)!
   pg
-  places_engine (= 3.0.4)!
+  places_engine (= 3.0.5)!
   proxy_engine (= 2.0.1)!
   rack-openid
   rails (= 3.2.13)
