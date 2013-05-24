@@ -11,6 +11,6 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //
-//= require cultural_network/application
+//= require kmaps_engine/application
 //= require thl_integration/application
 //= require universal_navigation/application

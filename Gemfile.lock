@@ -51,10 +51,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/complex_dates.git
-  revision: 220d9a529bcdb328e4946232a479bc4afd91f3fd
-  tag: v2.0.2
+  revision: e28b271280edb340809e62fc82bacf9400e8b2c2
+  tag: v2.0.3
   specs:
-    complex_dates (2.0.2)
+    complex_dates (2.0.3)
       rails (~> 3.2.11)
 
 GIT
@@ -65,14 +65,6 @@ GIT
     complex_scripts (2.0.7)
       passiverecord (= 0.2)
       rails (~> 3.2.8)
-
-GIT
-  remote: git://github.com/thl/cultural_network.git
-  revision: 7e2e20fad01b325c18d92c156e86dedba9fc528f
-  tag: v0.9.4
-  specs:
-    cultural_network (0.9.4)
-      rails (~> 3.2.13)
 
 GIT
   remote: git://github.com/thl/dictionary_integration.git
@@ -91,12 +83,11 @@ GIT
       rails (~> 3.2.11)
 
 GIT
-  remote: git://github.com/thl/kmaps_integration.git
-  revision: b8d1b6130afbbef5504585c4eb337b97ffc6aa3b
-  tag: v2.0.8
+  remote: git://github.com/thl/kmaps_engine.git
+  revision: 3499dc89dcff32d0f350df88b08772e39cbe1454
+  tag: v1.0.0
   specs:
-    kmaps_integration (2.0.8)
-      rails (~> 3.2.9)
+    kmaps_engine (1.0.0)
 
 GIT
   remote: git://github.com/thl/mms_integration.git
@@ -108,10 +99,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/places_engine.git
-  revision: 0eef080f64fedc9550ffa8eb346cafdfc4fe1bd0
-  tag: v3.0.5
+  revision: 6d6f2e295e946596e209dd41ea86abadd39005fb
+  tag: v3.1.0
   specs:
-    places_engine (3.0.5)
+    places_engine (3.1.0)
       rails (~> 3.2.11)
 
 GIT
@@ -131,11 +122,19 @@ GIT
       rails (~> 3.2.8)
 
 GIT
-  remote: git://github.com/thl/universal_navigation.git
-  revision: 4c491f8501c26aca8bb24a232460fc672a9b9daf
-  tag: v2.0.4
+  remote: git://github.com/thl/topical_map_integration.git
+  revision: 47524931a42a700da2e5af76e7d3388c88cc10d0
+  tag: v3.0.0
   specs:
-    universal_navigation (2.0.4)
+    topical_map_integration (3.0.0)
+      rails (~> 3.2.9)
+
+GIT
+  remote: git://github.com/thl/universal_navigation.git
+  revision: 46278c0fce258e8b7061180b3d85910d13a2bc61
+  tag: v2.0.5
+  specs:
+    universal_navigation (2.0.5)
       rails (~> 3.2.8)
 
 GEM
@@ -314,9 +313,8 @@ DEPENDENCIES
   annotate
   authenticated_system (= 2.1.0)!
   coffee-rails (~> 3.2.1)
-  complex_dates (= 2.0.2)!
+  complex_dates (= 2.0.3)!
   complex_scripts (= 2.0.7)!
-  cultural_network (= 0.9.4)!
   dictionary_integration (= 2.0.2)!
   dynamic_form
   exception_notification
@@ -325,7 +323,7 @@ DEPENDENCIES
   interface_utils (= 2.0.2)!
   jquery-rails
   json
-  kmaps_integration (= 2.0.8)!
+  kmaps_engine (= 1.0.0)!
   libv8 (= 3.3.10.2)
   makandra_resource_controller
   memcache-client
@@ -335,7 +333,7 @@ DEPENDENCIES
   open_id_authentication
   passiverecord (= 0.2)!
   pg
-  places_engine (= 3.0.5)!
+  places_engine (= 3.1.0)!
   proxy_engine (= 2.0.1)!
   rack-openid
   rails (= 3.2.13)
@@ -348,6 +346,7 @@ DEPENDENCIES
   therubyracer
   thl_integration (= 2.0.6)!
   tinymce-rails (= 3.5.6)
+  topical_map_integration (= 3.0.0)!
   uglifier (>= 1.0.3)
-  universal_navigation (= 2.0.4)!
+  universal_navigation (= 2.0.5)!
   will_paginate (~> 3.0)
