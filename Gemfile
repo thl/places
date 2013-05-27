@@ -44,15 +44,15 @@ gem 'acts_as_family_tree',        '1.0.2',        :git => 'git://github.com/thl/
 gem 'authenticated_system',       '2.1.0',        :git => 'git://github.com/thl/authenticated_system.git',       :tag => 'v2.1.0' #:path => '../engines/authenticated_system'
 gem 'complex_dates',              '2.0.3',        :git => 'git://github.com/thl/complex_dates.git',              :tag => 'v2.0.3' #:path => '../engines/complex_dates'
 gem 'complex_scripts',            '2.0.7',        :git => 'git://github.com/thl/complex_scripts.git',            :tag => 'v2.0.7' #:path => '../engines/complex_scripts'
-gem 'kmaps_engine',               '1.0.0',        :git => 'git://github.com/thl/kmaps_engine.git',               :tag => 'v1.0.0' #:path => '../../shanti/engines/kmaps_engine'
-gem 'interface_utils',            '2.0.2',        :git => 'git://github.com/thl/interface_utils.git',            :tag => 'v2.0.2' #:path => '../engines/interface_utils'
 gem 'dictionary_integration',     '2.0.2',        :git => 'git://github.com/thl/dictionary_integration.git',     :tag => 'v2.0.2' #:path => '../engines/dictionary_integration'
-gem 'topical_map_integration',    '3.0.0',        :git => 'git://github.com/thl/topical_map_integration.git',    :tag => 'v3.0.0' #:path => '../engines/topical_map_integration'
+gem 'interface_utils',            '2.0.2',        :git => 'git://github.com/thl/interface_utils.git',            :tag => 'v2.0.2' #:path => '../engines/interface_utils'
+gem 'kmaps_engine',               '1.0.0',        :git => 'git://github.com/shanti-uva/kmaps_engine.git',        :tag => 'v1.0.0' #:path => '../../shanti/engines/kmaps_engine'
 gem 'mms_integration',            '2.0.5',        :git => 'git://github.com/thl/mms_integration.git',            :tag => 'v2.0.5' #:path => '../engines/mms_integration'
 gem 'places_engine',              '3.1.0',        :git => 'git://github.com/thl/places_engine.git',              :tag => 'v3.1.0' #:path => '../engines/places_engine'
 gem 'proxy_engine',               '2.0.1',        :git => 'git://github.com/thl/proxy_engine.git',               :tag => 'v2.0.1' #:path => '../engines/proxy_engine'
-gem 'universal_navigation',       '2.0.5',        :git => 'git://github.com/thl/universal_navigation.git',       :tag => 'v2.0.5' #:path => '../engines/universal_navigation'
 gem 'thl_integration',            '2.0.6',        :git => 'git://github.com/thl/thl_integration.git',            :tag => 'v2.0.6' #:path => '../engines/thl_integration'
+gem 'topical_map_integration',    '3.0.0',        :git => 'git://github.com/thl/topical_map_integration.git',    :tag => 'v3.0.0' #:path => '../engines/topical_map_integration'
+gem 'universal_navigation',       '2.0.5',        :git => 'git://github.com/thl/universal_navigation.git',       :tag => 'v2.0.5' #:path => '../engines/universal_navigation'
 
 # To use debugger (ruby-debug for Ruby 1.8.7+, ruby-debug19 for Ruby 1.9.2+)
 group :development do

@@ -26,6 +26,14 @@ GIT
       activerecord (>= 2.2.2, < 3.3)
 
 GIT
+  remote: git://github.com/shanti-uva/kmaps_engine.git
+  revision: 761a736f7e9a282c07c47db4933517425d28a5f6
+  tag: v1.0.0
+  specs:
+    kmaps_engine (1.0.0)
+      rails (~> 3.2.13)
+
+GIT
   remote: git://github.com/thl/active_resource_extensions.git
   revision: a8d01dca2a40dfb32b85758871b5076303d932a4
   tag: v2.0.5
@@ -81,13 +89,6 @@ GIT
   specs:
     interface_utils (2.0.2)
       rails (~> 3.2.11)
-
-GIT
-  remote: git://github.com/thl/kmaps_engine.git
-  revision: 3499dc89dcff32d0f350df88b08772e39cbe1454
-  tag: v1.0.0
-  specs:
-    kmaps_engine (1.0.0)
 
 GIT
   remote: git://github.com/thl/mms_integration.git
