@@ -51,7 +51,7 @@ gem 'places_integration',         '2.0.6',        :git => 'git://github.com/thl/
 gem 'mms_integration',            '2.1.6',        :git => 'git://github.com/thl/mms_integration.git',             :tag => 'v2.1.6' #:path => '../engines/mms_integration'
 gem 'places_engine',              '3.4.6',        :git => 'git://github.com/thl/places_engine.git',               :tag => 'v3.4.6' #:path => '../engines/places_engine'
 gem 'proxy_engine',               '2.0.2',        :git => 'git://github.com/thl/proxy_engine.git',                :tag => 'v2.0.2' #:path => '../engines/proxy_engine'
-gem 'subjects_integration',       '0.0.6',        :git => 'git://github.com/shanti-uva/subjects_integration.git', :tag => 'v0.0.6' #:path => '../engines/subjects_integration'
+gem 'subjects_integration',       '0.0.7',        :git => 'git://github.com/shanti-uva/subjects_integration.git', :tag => 'v0.0.7' #:path => '../../shanti/engines/subjects_integration'
 gem 'thl_integration',            '2.0.9',        :git => 'git://github.com/thl/thl_integration.git',             :tag => 'v2.0.9' #:path => '../engines/thl_integration'
 # gem 'topical_map_integration',    '3.0.4',        :git => 'git://github.com/thl/topical_map_integration.git',    :tag => 'v3.0.4' #:path => '../engines/topical_map_integration'
 gem 'universal_navigation',       '2.0.9',        :git => 'git://github.com/thl/universal_navigation.git',        :tag => 'v2.0.9' #:path => '../engines/universal_navigation'
