@@ -1,128 +1,17 @@
-# This file is auto-generated from the current state of the database. Instead of editing this file, 
-# please use the migrations feature of Active Record to incrementally modify your database, and
-# then regenerate this schema definition.
+# This file is auto-generated from the current state of the database. Instead
+# of editing this file, please use the migrations feature of Active Record to
+# incrementally modify your database, and then regenerate this schema definition.
 #
-# Note that this schema.rb definition is the authoritative source for your database schema. If you need
-# to create the application database on another system, you should be using db:schema:load, not running
-# all the migrations from scratch. The latter is a flawed and unsustainable approach (the more migrations
+# Note that this schema.rb definition is the authoritative source for your
+# database schema. If you need to create the application database on another
+# system, you should be using db:schema:load, not running all the migrations
+# from scratch. The latter is a flawed and unsustainable approach (the more migrations
 # you'll amass, the slower it'll run and the greater likelihood for issues).
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111124195857) do
-
-  create_table "Birth_rate", :id => false, :force => true do |t|
-    t.integer "gid",                       :null => false
-    t.string  "name",       :limit => 27
-    t.float   "pop_total"
-    t.float   "births_199"
-    t.float   "rate"
-    t.polygon "the_geom",   :limit => nil,                 :srid => 4326
-  end
-
-  create_table "Births_and_deaths", :id => false, :force => true do |t|
-    t.integer "gid",                        :null => false
-    t.string  "name",        :limit => 27
-    t.float   "births_1990"
-    t.float   "deaths_1990"
-    t.polygon "the_geom",    :limit => nil,                 :srid => 4326
-  end
-
-  create_table "Death_rate", :id => false, :force => true do |t|
-    t.integer "gid",                       :null => false
-    t.string  "name",       :limit => 27
-    t.float   "pop_total"
-    t.float   "death_1990"
-    t.float   "rate"
-    t.polygon "the_geom",   :limit => nil,                 :srid => 4326
-  end
-
-  create_table "Economical_activity", :id => false, :force => true do |t|
-    t.integer "gid",                        :null => false
-    t.string  "name",        :limit => 27
-    t.float   "agriculture"
-    t.float   "industry"
-    t.float   "mining"
-    t.float   "constructio"
-    t.float   "government_"
-    t.integer "other"
-    t.polygon "the_geom",    :limit => nil,                 :srid => 4326
-  end
-
-  create_table "Ethnic_distribution", :id => false, :force => true do |t|
-    t.integer "gid",                        :null => false
-    t.string  "name",        :limit => 27
-    t.float   "population_"
-    t.float   "Han"
-    t.float   "Tibetans"
-    t.float   "Mongols"
-    t.float   "Hui"
-    t.integer "other"
-    t.polygon "the_geom",    :limit => nil,                 :srid => 4326
-  end
-
-  create_table "Han_rate", :id => false, :force => true do |t|
-    t.integer "gid",                      :null => false
-    t.string  "name",      :limit => 27
-    t.float   "pop_total"
-    t.float   "pop_han"
-    t.float   "rate"
-    t.polygon "the_geom",  :limit => nil,                 :srid => 4326
-  end
-
-  create_table "Illiteracy_per_gender", :id => false, :force => true do |t|
-    t.integer "gid",                       :null => false
-    t.string  "name",       :limit => 27
-    t.float   "pop_total"
-    t.float   "illit_male"
-    t.float   "illit_fem"
-    t.polygon "the_geom",   :limit => nil,                 :srid => 4326
-  end
-
-  create_table "Illiteracy_rate", :id => false, :force => true do |t|
-    t.integer "gid",                      :null => false
-    t.string  "name",      :limit => 27
-    t.float   "pop_total"
-    t.float   "pop_illet"
-    t.float   "rate"
-    t.polygon "the_geom",  :limit => nil,                 :srid => 4326
-  end
-
-  create_table "Immigration_rate", :id => false, :force => true do |t|
-    t.integer "gid",                      :null => false
-    t.string  "name",      :limit => 27
-    t.integer "pop_total"
-    t.float   "immig"
-    t.float   "rate"
-    t.polygon "the_geom",  :limit => nil,                 :srid => 4326
-  end
-
-  create_table "Population_density", :id => false, :force => true do |t|
-    t.integer "gid",                      :null => false
-    t.string  "name",      :limit => 27
-    t.float   "pop_total"
-    t.float   "sq_km"
-    t.float   "density"
-    t.polygon "the_geom",  :limit => nil,                 :srid => 4326
-  end
-
-  create_table "Population_per_gender", :id => false, :force => true do |t|
-    t.integer "gid",                        :null => false
-    t.string  "name",        :limit => 27
-    t.float   "males_1990"
-    t.float   "females_199"
-    t.polygon "the_geom",    :limit => nil,                 :srid => 4326
-  end
-
-  create_table "Tibetan_rate", :id => false, :force => true do |t|
-    t.integer "gid",                      :null => false
-    t.string  "name",      :limit => 27
-    t.float   "pop_total"
-    t.float   "pop_tib"
-    t.float   "rate"
-    t.polygon "the_geom",  :limit => nil,                 :srid => 4326
-  end
-
+ActiveRecord::Schema.define(:version => 20130213214759) do
+  
   create_table "altitudes", :force => true do |t|
     t.integer  "feature_id", :null => false
     t.integer  "maximum"
@@ -143,19 +32,6 @@ ActiveRecord::Schema.define(:version => 20111124195857) do
     t.integer "note_id",   :null => false
     t.integer "author_id", :null => false
   end
-
-  create_table "bellezza", :primary_key => "gid", :force => true do |t|
-    t.integer "objectid"
-    t.decimal "sort_no"
-    t.string  "type",       :limit => 254
-    t.string  "site_no",    :limit => 254
-    t.string  "name_wylie", :limit => 254
-    t.string  "name_eng",   :limit => 254
-    t.string  "county",     :limit => 254
-    t.point   "the_geom",   :limit => nil, :srid => 4326
-  end
-
-  add_index "bellezza", ["the_geom"], :name => "bellezza_geom", :spatial => true
 
   create_table "blurbs", :force => true do |t|
     t.string   "code"
@@ -301,13 +177,6 @@ ActiveRecord::Schema.define(:version => 20111124195857) do
     t.string   "source_url"
   end
 
-  create_table "electricity_use_10_million_watt_hours", :id => false, :force => true do |t|
-    t.integer "gid",                      :null => false
-    t.string  "name",      :limit => 27
-    t.float   "elect_use"
-    t.polygon "the_geom",  :limit => nil,                 :srid => 4326
-  end
-
   create_table "feature_geo_codes", :force => true do |t|
     t.integer  "feature_id"
     t.integer  "geo_code_type_id"
@@ -399,34 +268,6 @@ ActiveRecord::Schema.define(:version => 20111124195857) do
   add_index "features", ["fid"], :name => "features_fid", :unique => true
   add_index "features", ["is_public"], :name => "features_is_public_idx"
 
-  create_table "fontdemo", :primary_key => "gid", :force => true do |t|
-    t.string "font",     :limit => 50
-    t.string "text",     :limit => 100
-    t.float  "x"
-    t.float  "y"
-    t.point  "geometry", :limit => nil, :srid => 4326
-  end
-
-  create_table "gis_id_xref", :id => false, :force => true do |t|
-    t.integer "gis_id"
-    t.integer "fid"
-  end
-
-  create_table "grain_output_tons", :id => false, :force => true do |t|
-    t.integer "gid",                        :null => false
-    t.string  "name",        :limit => 27
-    t.float   "output_tons"
-    t.polygon "the_geom",    :limit => nil,                 :srid => 4326
-  end
-
-  create_table "illiteracy_per_gender", :id => false, :force => true do |t|
-    t.text     "name"
-    t.float    "pop_total"
-    t.float    "illit_male"
-    t.float    "illit_fem"
-    t.geometry "geometry",   :limit => nil, :srid => 4326
-  end
-
   create_table "info_sources", :force => true do |t|
     t.string   "code",           :null => false
     t.string   "title"
@@ -437,40 +278,6 @@ ActiveRecord::Schema.define(:version => 20111124195857) do
   end
 
   add_index "info_sources", ["code"], :name => "info_sources_code_key", :unique => true
-
-  create_table "khrom_empire_garrisons", :id => false, :force => true do |t|
-    t.integer "gid",                       :null => false
-    t.float   "AREA"
-    t.float   "PERIMETER"
-    t.integer "VKHROM_"
-    t.integer "VKHROM_ID"
-    t.float   "GIS_ID"
-    t.string  "khrom__gar", :limit => 254
-    t.string  "Region_s_",  :limit => 254
-    t.string  "Location_n", :limit => 254
-    t.string  "source",     :limit => 254
-    t.float   "X_Deg"
-    t.float   "X_Min"
-    t.float   "Y_Deg"
-    t.float   "Y_Min"
-    t.string  "F10",        :limit => 254
-    t.float   "X_dd"
-    t.float   "Y_dd"
-    t.point   "the_geom",   :limit => nil,                 :srid => 4326
-  end
-
-  create_table "landcover", :primary_key => "gid", :force => true do |t|
-    t.string   "type",     :limit => 40
-    t.geometry "the_geom", :limit => nil
-  end
-
-  add_index "landcover", ["the_geom"], :name => "landcover_geom", :spatial => true
-
-  create_table "lhasa_temples", :primary_key => "gid", :force => true do |t|
-    t.integer       "id"
-    t.integer       "gis_id"
-    t.multi_polygon "the_geom", :limit => nil, :srid => 4326
-  end
 
   create_table "note_titles", :force => true do |t|
     t.string   "title"
@@ -547,34 +354,6 @@ ActiveRecord::Schema.define(:version => 20111124195857) do
 
   add_index "roles_users", ["role_id", "user_id"], :name => "index_roles_users_on_role_id_and_user_id", :unique => true
 
-  create_table "roman_popular", :primary_key => "gid", :force => true do |t|
-    t.integer  "fid"
-    t.integer  "object_type"
-    t.string   "language"
-    t.string   "name"
-    t.text     "geotype"
-    t.geometry "geometry",    :limit => nil
-  end
-
-  add_index "roman_popular", ["fid"], :name => "roman_popular_fid"
-  add_index "roman_popular", ["geometry"], :name => "roman_popular_gist", :spatial => true
-  add_index "roman_popular", ["language"], :name => "roman_popular_language"
-  add_index "roman_popular", ["object_type"], :name => "roman_popular_object_type"
-
-  create_table "roman_scholarly", :primary_key => "gid", :force => true do |t|
-    t.integer  "fid"
-    t.integer  "object_type"
-    t.string   "language"
-    t.string   "name"
-    t.text     "geotype"
-    t.geometry "geometry",    :limit => nil
-  end
-
-  add_index "roman_scholarly", ["fid"], :name => "roman_scholarly_fid"
-  add_index "roman_scholarly", ["geometry"], :name => "roman_scholarly_gist", :spatial => true
-  add_index "roman_scholarly", ["language"], :name => "roman_scholarly_language"
-  add_index "roman_scholarly", ["object_type"], :name => "roman_scholarly_object_type"
-
   create_table "shapes", :primary_key => "gid", :force => true do |t|
     t.geometry "geometry",   :limit => nil,                                   :srid => 4326
     t.integer  "fid"
@@ -588,21 +367,7 @@ ActiveRecord::Schema.define(:version => 20111124195857) do
 
   add_index "shapes", ["fid"], :name => "shapes_fid"
   add_index "shapes", ["geometry"], :name => "features_geometry_gist", :spatial => true
-  add_index "shapes", [nil], :name => "shapes_geotype"
-
-  create_table "simple_chinese", :primary_key => "gid", :force => true do |t|
-    t.integer  "fid"
-    t.integer  "object_type"
-    t.string   "language"
-    t.string   "name"
-    t.text     "geotype"
-    t.geometry "geometry",    :limit => nil
-  end
-
-  add_index "simple_chinese", ["fid"], :name => "simple_chinese_fid"
-  add_index "simple_chinese", ["geometry"], :name => "simple_chinese_gist", :spatial => true
-  add_index "simple_chinese", ["language"], :name => "simple_chinese_language"
-  add_index "simple_chinese", ["object_type"], :name => "simple_chinese_object_type"
+  add_index "shapes", [], :name => "shapes_geotype"
 
   create_table "simple_props", :force => true do |t|
     t.string   "name"
@@ -616,38 +381,6 @@ ActiveRecord::Schema.define(:version => 20111124195857) do
 
   add_index "simple_props", ["code"], :name => "simple_props_code_idx"
   add_index "simple_props", ["type"], :name => "simple_props_type_idx"
-
-  create_table "symbol_type", :id => false, :force => true do |t|
-    t.integer "object_type"
-    t.string  "symbol",      :limit => nil
-  end
-
-  create_table "test2", :id => false, :force => true do |t|
-    t.integer  "gid",                        :null => false
-    t.integer  "fid"
-    t.integer  "object_type"
-    t.string   "language"
-    t.string   "name"
-    t.text     "geotype"
-    t.geometry "geometry",    :limit => nil,                 :srid => 4326
-  end
-
-  add_index "test2", ["fid"], :name => "test2_fid"
-  add_index "test2", ["geometry"], :name => "test2_gist", :spatial => true
-  add_index "test2", ["language"], :name => "test2_language"
-  add_index "test2", ["object_type"], :name => "test2_object_type"
-
-  create_table "tibetan_roman", :primary_key => "gid", :force => true do |t|
-    t.integer  "fid"
-    t.integer  "object_type"
-    t.string   "language"
-    t.string   "name"
-    t.text     "geotype"
-    t.geometry "geometry",    :limit => nil
-  end
-
-  add_index "tibetan_roman", ["language"], :name => "tibetan_roman_language"
-  add_index "tibetan_roman", ["object_type"], :name => "tibetan_roman_object_type"
 
   create_table "time_units", :force => true do |t|
     t.integer  "date_id"
@@ -678,61 +411,18 @@ ActiveRecord::Schema.define(:version => 20111124195857) do
   add_index "timespans", ["end_date"], :name => "timespans_end_date_idx"
   add_index "timespans", ["start_date"], :name => "timespans_start_date_idx"
 
-  create_table "tlatlong", :primary_key => "gid", :force => true do |t|
-    t.integer "valueid",    :limit => 8
-    t.integer "polyid",     :limit => 8
-    t.float   "area"
-    t.float   "perimeter"
-    t.integer "tlatlong#"
-    t.integer "tlatlong-i"
-    t.point   "the_geom",   :limit => nil, :srid => 4326
-  end
-
-  create_table "traditional_chinese", :primary_key => "gid", :force => true do |t|
-    t.integer  "fid"
-    t.integer  "object_type"
-    t.string   "language"
-    t.string   "name"
-    t.text     "geotype"
-    t.geometry "geometry",    :limit => nil
-  end
-
-  add_index "traditional_chinese", ["fid"], :name => "traditional_chinese_fid"
-  add_index "traditional_chinese", ["geometry"], :name => "traditional_chinese_gist", :spatial => true
-  add_index "traditional_chinese", ["language"], :name => "traditional_chinese_language"
-  add_index "traditional_chinese", ["object_type"], :name => "traditional_chinese_object_type"
-
-  create_table "trtibet", :id => false, :force => true do |t|
-    t.string "pc",  :limit => 1
-    t.string "std", :limit => 7
-  end
-
-  create_table "ulatlong", :primary_key => "gid", :force => true do |t|
-    t.integer "valueid",    :limit => 8
-    t.integer "polyid",     :limit => 8
-    t.float   "area"
-    t.float   "perimeter"
-    t.integer "ulatlong#"
-    t.integer "ulatlong-i"
-    t.integer "vugompa_",   :limit => 8
-    t.integer "vugompa_id", :limit => 8
-    t.decimal "h465utm_",                  :precision => 20, :scale => 0
-    t.decimal "h465utm_id",                :precision => 20, :scale => 0
-    t.decimal "gis_id",                    :precision => 20, :scale => 0
-    t.point   "the_geom",   :limit => nil,                                :srid => 4326
-  end
-
   create_table "users", :force => true do |t|
     t.string   "login",                                   :null => false
     t.string   "email",                                   :null => false
     t.integer  "person_id",                               :null => false
-    t.string   "crypted_password",          :limit => 40, :null => false
+    t.string   "crypted_password",          :limit => 40
     t.string   "salt",                      :limit => 40
     t.string   "remember_token"
     t.datetime "remember_token_expires_at"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "identity_url"
+    t.string   "shibboleth_id"
   end
 
   create_table "xml_documents", :force => true do |t|

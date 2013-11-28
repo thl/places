@@ -5,5 +5,5 @@ my_date_formats = {
   :uk_datetime  => '%H:%M on %d %b %Y, %Y'
 }
 
-ActiveSupport::CoreExtensions::Time::Conversions::DATE_FORMATS.merge!(my_date_formats)
-ActiveSupport::CoreExtensions::Date::Conversions::DATE_FORMATS.merge!(my_date_formats)
+Time::DATE_FORMATS.merge!(my_date_formats)
+Date::DATE_FORMATS.merge!(my_date_formats)

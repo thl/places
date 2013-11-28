@@ -1,0 +1,362 @@
+GIT
+  remote: git://github.com/Satish/restful-authentication.git
+  revision: a2f669944c86f2bec46bb248360e556a983140d4
+  branch: rails3
+  specs:
+    restful-authentication (2.0.0.beta1)
+
+GIT
+  remote: git://github.com/ambethia/passiverecord.git
+  revision: cdf0747243e9bbf067ab6fea8cc6cc8f860112b1
+  specs:
+    passiverecord (0.2)
+
+GIT
+  remote: git://github.com/kartofflly/spawn.git
+  revision: 9096752c05b6eb8f5d8e0c24ad74bde4fea583ee
+  specs:
+    spawn (1.0.1)
+
+GIT
+  remote: git://github.com/movableink/spatial_adapter.git
+  revision: 8d8702fa6600e5711f1d2c87c78cf28e7cd292d0
+  specs:
+    spatial_adapter (1.3.1)
+      GeoRuby (>= 1.3.0)
+      activerecord (>= 2.2.2, < 3.3)
+
+GIT
+  remote: git://github.com/shanti-uva/kmaps_engine.git
+  revision: 2680f573414a8beb4f8b908f873fa41265c501b0
+  tag: v1.6.4
+  specs:
+    kmaps_engine (1.6.4)
+      rails (~> 3.2.13)
+
+GIT
+  remote: git://github.com/shanti-uva/subjects_integration.git
+  revision: 9358a46ebffdf326d552cbcc0b7f3ca084e781cb
+  tag: v0.0.7
+  specs:
+    subjects_integration (0.0.7)
+      rails (~> 3.2.13)
+
+GIT
+  remote: git://github.com/thl/active_resource_extensions.git
+  revision: a9f55e62777a1063074fc6332a522b83388ea988
+  tag: v2.0.8
+  specs:
+    active_resource_extensions (2.0.8)
+      rails (~> 3.2.8)
+
+GIT
+  remote: git://github.com/thl/acts_as_family_tree.git
+  revision: ddbe60858a9814b2c3b3ab25a72ffb9e41a45641
+  tag: v1.0.3
+  specs:
+    acts_as_family_tree (1.0.3)
+      rails (~> 3.2.11)
+
+GIT
+  remote: git://github.com/thl/authenticated_system.git
+  revision: 7f7521a29d856fb0d3958bc645970a6ed0907bb0
+  tag: v2.1.5
+  specs:
+    authenticated_system (2.1.5)
+      rails (~> 3.2.8)
+
+GIT
+  remote: git://github.com/thl/complex_dates.git
+  revision: 8aba88807c6b6984d8da6fe176780c7027275994
+  tag: v2.0.5
+  specs:
+    complex_dates (2.0.5)
+      rails (~> 3.2.11)
+
+GIT
+  remote: git://github.com/thl/complex_scripts.git
+  revision: f1f8a6dc0e9375d3f026058109e752e1f5cf5411
+  tag: v2.1.0
+  specs:
+    complex_scripts (2.1.0)
+      passiverecord (= 0.2)
+      rails (~> 3.2.8)
+
+GIT
+  remote: git://github.com/thl/dictionary_integration.git
+  revision: 072a7c3bb46da6b84834e75baa5b9dcbf6832a3b
+  tag: v2.0.2
+  specs:
+    dictionary_integration (2.0.2)
+      rails (~> 3.2.9)
+
+GIT
+  remote: git://github.com/thl/interface_utils.git
+  revision: 961ae0cae81f080110968a9478c212e94fec1ca8
+  tag: v2.0.5
+  specs:
+    interface_utils (2.0.5)
+      rails (~> 3.2.11)
+
+GIT
+  remote: git://github.com/thl/mms_integration.git
+  revision: 30b3e2713b0eba3505aa87cbafd39e1726598ef5
+  tag: v2.1.6
+  specs:
+    mms_integration (2.1.6)
+      rails (~> 3.2.8)
+
+GIT
+  remote: git://github.com/thl/places_engine.git
+  revision: a2b4ad352ad0e0e59dcb0044fc50cf3d886b3558
+  tag: v3.4.8
+  specs:
+    places_engine (3.4.8)
+      rails (~> 3.2.11)
+
+GIT
+  remote: git://github.com/thl/places_integration.git
+  revision: e7b0a5011e28aeddeb2eb311f6e9cd4a70509485
+  tag: v2.0.6
+  specs:
+    places_integration (2.0.6)
+      rails (~> 3.2.8)
+
+GIT
+  remote: git://github.com/thl/proxy_engine.git
+  revision: 33a81f65f9b66ffc9f2e62ce77fa9db922c7cc85
+  tag: v2.0.2
+  specs:
+    proxy_engine (2.0.2)
+      rails (~> 3.2.9)
+
+GIT
+  remote: git://github.com/thl/thl_integration.git
+  revision: 17be64bf69236d86ac9482380c58c96590bd8692
+  tag: v2.0.9
+  specs:
+    thl_integration (2.0.9)
+      rails (~> 3.2.8)
+
+GIT
+  remote: git://github.com/thl/universal_navigation.git
+  revision: 1f75bdf3731e98f32f06ad6198cc4c92be2e9cac
+  tag: v2.0.9
+  specs:
+    universal_navigation (2.0.9)
+      rails (~> 3.2.8)
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    GeoRuby (1.3.4)
+    actionmailer (3.2.13)
+      actionpack (= 3.2.13)
+      mail (~> 2.5.3)
+    actionpack (3.2.13)
+      activemodel (= 3.2.13)
+      activesupport (= 3.2.13)
+      builder (~> 3.0.0)
+      erubis (~> 2.7.0)
+      journey (~> 1.0.4)
+      rack (~> 1.4.5)
+      rack-cache (~> 1.2)
+      rack-test (~> 0.6.1)
+      sprockets (~> 2.2.1)
+    activemodel (3.2.13)
+      activesupport (= 3.2.13)
+      builder (~> 3.0.0)
+    activerecord (3.2.13)
+      activemodel (= 3.2.13)
+      activesupport (= 3.2.13)
+      arel (~> 3.0.2)
+      tzinfo (~> 0.3.29)
+    activeresource (3.2.13)
+      activemodel (= 3.2.13)
+      activesupport (= 3.2.13)
+    activesupport (3.2.13)
+      i18n (= 0.6.1)
+      multi_json (~> 1.0)
+    annotate (2.5.0)
+      rake
+    arel (3.0.2)
+    builder (3.0.4)
+    cgi_multipart_eof_fix (2.5.0)
+    coffee-rails (3.2.2)
+      coffee-script (>= 2.2.0)
+      railties (~> 3.2.0)
+    coffee-script (2.2.0)
+      coffee-script-source
+      execjs
+    coffee-script-source (1.4.0)
+    columnize (0.3.6)
+    daemons (1.1.9)
+    dynamic_form (1.1.4)
+    erubis (2.7.0)
+    eventmachine (1.0.0)
+    exception_notification (3.0.0)
+      actionmailer (>= 3.0.4)
+      tinder (~> 1.8)
+    execjs (1.4.0)
+      multi_json (~> 1.0)
+    faraday (0.8.4)
+      multipart-post (~> 1.1)
+    faraday_middleware (0.9.0)
+      faraday (>= 0.7.4, < 0.9)
+    fastthread (1.0.7)
+    gem_plugin (0.2.3)
+    georuby (2.0.0)
+    hashie (1.2.0)
+    hike (1.2.1)
+    hpricot (0.8.6)
+    http_parser.rb (0.5.3)
+    i18n (0.6.1)
+    journey (1.0.4)
+    jquery-rails (2.2.0)
+      railties (>= 3.0, < 5.0)
+      thor (>= 0.14, < 2.0)
+    json (1.7.7)
+    libv8 (3.3.10.2)
+    linecache (0.46)
+      rbx-require-relative (> 0.0.4)
+    mail (2.5.3)
+      i18n (>= 0.4.0)
+      mime-types (~> 1.16)
+      treetop (~> 1.4.8)
+    makandra_resource_controller (0.8.0)
+    memcache-client (1.8.5)
+    mime-types (1.21)
+    mongrel (1.1.5)
+      cgi_multipart_eof_fix (>= 2.4)
+      daemons (>= 1.0.3)
+      fastthread (>= 1.0.1)
+      gem_plugin (>= 0.2.3)
+    multi_json (1.7.2)
+    multipart-post (1.1.5)
+    newrelic_rpm (3.5.6.55)
+    open_id_authentication (1.1.0)
+      rack-openid (~> 1.3)
+    pg (0.14.1)
+    polyglot (0.3.3)
+    rack (1.4.5)
+    rack-cache (1.2)
+      rack (>= 0.4)
+    rack-openid (1.3.1)
+      rack (>= 1.1.0)
+      ruby-openid (>= 2.1.8)
+    rack-ssl (1.3.3)
+      rack
+    rack-test (0.6.2)
+      rack (>= 1.0)
+    rails (3.2.13)
+      actionmailer (= 3.2.13)
+      actionpack (= 3.2.13)
+      activerecord (= 3.2.13)
+      activeresource (= 3.2.13)
+      activesupport (= 3.2.13)
+      bundler (~> 1.0)
+      railties (= 3.2.13)
+    railties (3.2.13)
+      actionpack (= 3.2.13)
+      activesupport (= 3.2.13)
+      rack-ssl (~> 1.3.2)
+      rake (>= 0.8.7)
+      rdoc (~> 3.4)
+      thor (>= 0.14.6, < 2.0)
+    rake (10.0.4)
+    rbx-require-relative (0.0.9)
+    rdoc (3.12.2)
+      json (~> 1.4)
+    ruby-debug (0.10.4)
+      columnize (>= 0.1)
+      ruby-debug-base (~> 0.10.4.0)
+    ruby-debug-base (0.10.4)
+      linecache (>= 0.3)
+    ruby-openid (2.2.2)
+    sass (3.2.5)
+    sass-rails (3.2.6)
+      railties (~> 3.2.0)
+      sass (>= 3.1.10)
+      tilt (~> 1.3)
+    simple_oauth (0.1.9)
+    sprockets (2.2.2)
+      hike (~> 1.2)
+      multi_json (~> 1.0)
+      rack (~> 1.0)
+      tilt (~> 1.1, != 1.3.0)
+    system_timer (1.2.4)
+    therubyracer (0.10.2)
+      libv8 (~> 3.3.10)
+    thor (0.18.0)
+    tilt (1.3.6)
+    tinder (1.9.2)
+      eventmachine (~> 1.0)
+      faraday (~> 0.8)
+      faraday_middleware (~> 0.9)
+      hashie (~> 1.0)
+      json (~> 1.7.5)
+      mime-types (~> 1.19)
+      multi_json (~> 1.5)
+      twitter-stream (~> 0.1)
+    tinymce-rails (3.5.6)
+      railties (>= 3.1.1)
+    treetop (1.4.12)
+      polyglot
+      polyglot (>= 0.3.1)
+    twitter-stream (0.1.16)
+      eventmachine (>= 0.12.8)
+      http_parser.rb (~> 0.5.1)
+      simple_oauth (~> 0.1.4)
+    tzinfo (0.3.37)
+    uglifier (1.3.0)
+      execjs (>= 0.3.0)
+      multi_json (~> 1.0, >= 1.0.2)
+    will_paginate (3.0.4)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  active_resource_extensions (= 2.0.8)!
+  acts_as_family_tree (= 1.0.3)!
+  annotate
+  authenticated_system (= 2.1.5)!
+  coffee-rails (~> 3.2.1)
+  complex_dates (= 2.0.5)!
+  complex_scripts (= 2.1.0)!
+  dictionary_integration (= 2.0.2)!
+  dynamic_form
+  exception_notification
+  georuby
+  hpricot (>= 0.8.6)
+  interface_utils (= 2.0.5)!
+  jquery-rails
+  json
+  kmaps_engine (= 1.6.4)!
+  libv8 (= 3.3.10.2)
+  makandra_resource_controller
+  memcache-client
+  mms_integration (= 2.1.6)!
+  mongrel
+  newrelic_rpm
+  open_id_authentication
+  passiverecord (= 0.2)!
+  pg
+  places_engine (= 3.4.8)!
+  places_integration (= 2.0.6)!
+  proxy_engine (= 2.0.2)!
+  rack-openid
+  rails (= 3.2.13)
+  restful-authentication (= 2.0.0.beta1)!
+  ruby-debug
+  sass-rails (~> 3.2.3)
+  spatial_adapter (= 1.3.1)!
+  spawn (= 1.0.1)!
+  subjects_integration (= 0.0.7)!
+  system_timer
+  therubyracer
+  thl_integration (= 2.0.9)!
+  tinymce-rails (= 3.5.6)
+  uglifier (>= 1.0.3)
+  universal_navigation (= 2.0.9)!
+  will_paginate (~> 3.0)
