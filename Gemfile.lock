@@ -27,10 +27,10 @@ GIT
 
 GIT
   remote: git://github.com/shanti-uva/kmaps_engine.git
-  revision: 2680f573414a8beb4f8b908f873fa41265c501b0
-  tag: v1.6.4
+  revision: e546723f0bc543230d464ad99dd5d727675def79
+  tag: v1.6.5
   specs:
-    kmaps_engine (1.6.4)
+    kmaps_engine (1.6.5)
       rails (~> 3.2.13)
 
 GIT
@@ -51,10 +51,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/acts_as_family_tree.git
-  revision: ddbe60858a9814b2c3b3ab25a72ffb9e41a45641
-  tag: v1.0.3
+  revision: 51d1a345b529bfdbbe4a56b2f126f610fc8911b6
+  tag: v1.0.4
   specs:
-    acts_as_family_tree (1.0.3)
+    acts_as_family_tree (1.0.4)
       rails (~> 3.2.11)
 
 GIT
@@ -318,7 +318,7 @@ PLATFORMS
 
 DEPENDENCIES
   active_resource_extensions (= 2.0.8)!
-  acts_as_family_tree (= 1.0.3)!
+  acts_as_family_tree (= 1.0.4)!
   annotate
   authenticated_system (= 2.1.5)!
   coffee-rails (~> 3.2.1)
@@ -332,7 +332,7 @@ DEPENDENCIES
   interface_utils (= 2.0.5)!
   jquery-rails
   json
-  kmaps_engine (= 1.6.4)!
+  kmaps_engine (= 1.6.5)!
   libv8 (= 3.3.10.2)
   makandra_resource_controller
   memcache-client
