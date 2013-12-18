@@ -27,10 +27,10 @@ GIT
 
 GIT
   remote: git://github.com/shanti-uva/kmaps_engine.git
-  revision: 1e8ba763d0d955346e501b8b62f27f1ec339be10
-  tag: v1.7.0
+  revision: 38520ff35d30cdba7e2e2e0e888c6a79cc434da4
+  tag: v1.7.1
   specs:
-    kmaps_engine (1.7.0)
+    kmaps_engine (1.7.1)
       rails (~> 3.2.13)
 
 GIT
@@ -92,10 +92,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/interface_utils.git
-  revision: 961ae0cae81f080110968a9478c212e94fec1ca8
-  tag: v2.0.5
+  revision: 698ba1ae6d9c65fa6effdefae169ab0386a8a0d2
+  tag: v2.0.6
   specs:
-    interface_utils (2.0.5)
+    interface_utils (2.0.6)
       rails (~> 3.2.11)
 
 GIT
@@ -108,10 +108,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/places_engine.git
-  revision: 54d13e7fa15cbbc9377639a6202307a56e28426e
-  tag: v3.5.0
+  revision: 057ea75b73a3a30abe8aad3d56043e644c0f216b
+  tag: v3.5.1
   specs:
-    places_engine (3.5.0)
+    places_engine (3.5.1)
       rails (~> 3.2.11)
 
 GIT
@@ -329,10 +329,10 @@ DEPENDENCIES
   exception_notification
   georuby
   hpricot (>= 0.8.6)
-  interface_utils (= 2.0.5)!
+  interface_utils (= 2.0.6)!
   jquery-rails
   json
-  kmaps_engine (= 1.7.0)!
+  kmaps_engine (= 1.7.1)!
   libv8 (= 3.3.10.2)
   makandra_resource_controller
   memcache-client
@@ -342,7 +342,7 @@ DEPENDENCIES
   open_id_authentication
   passiverecord (= 0.2)!
   pg
-  places_engine (= 3.5.0)!
+  places_engine (= 3.5.1)!
   places_integration (= 2.0.6)!
   proxy_engine (= 2.0.2)!
   rack-openid
