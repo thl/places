@@ -6,7 +6,8 @@ tmp/
 *.tmproj
 *.csv
 *.txt
-config/*.yml
+config/database.yml
+config/newrelic.yml
 config/environments/quandu_*.rb
 config/environments/bleak_house.rb
 doc/plugins/*
