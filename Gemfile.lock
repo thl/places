@@ -27,10 +27,10 @@ GIT
 
 GIT
   remote: git://github.com/shanti-uva/kmaps_engine.git
-  revision: 29cbd25b7715a75477e97ed34177709e51705c2f
-  tag: v1.8.7
+  revision: aaa4ff19b22e9dacb0bb10f0ccbbf34439717a4e
+  tag: v1.8.8
   specs:
-    kmaps_engine (1.8.7)
+    kmaps_engine (1.8.8)
       rails (~> 3.2.13)
 
 GIT
@@ -92,10 +92,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/interface_utils.git
-  revision: ee32201d0cceca27523c64aadc8d1ca0bbd4ac0a
-  tag: v2.0.7
+  revision: 44882c3b09a4453f5f31adf28315df8b2247a7cd
+  tag: v2.0.8
   specs:
-    interface_utils (2.0.7)
+    interface_utils (2.0.8)
       rails (~> 3.2.11)
 
 GIT
@@ -329,10 +329,10 @@ DEPENDENCIES
   exception_notification
   georuby
   hpricot (>= 0.8.6)
-  interface_utils (= 2.0.7)!
+  interface_utils (= 2.0.8)!
   jquery-rails
   json
-  kmaps_engine (= 1.8.7)!
+  kmaps_engine (= 1.8.8)!
   libv8 (= 3.3.10.2)
   makandra_resource_controller
   memcache-client
