@@ -27,10 +27,10 @@ GIT
 
 GIT
   remote: git://github.com/shanti-uva/kmaps_engine.git
-  revision: f1bdc7b8ea5b06e4e6281e99f593c00eb546a86e
-  tag: v1.9.0
+  revision: eb9527635d54428d2f72eb8b7218262395776298
+  tag: v1.9.1
   specs:
-    kmaps_engine (1.9.0)
+    kmaps_engine (1.9.1)
       rails (~> 3.2.13)
 
 GIT
@@ -108,10 +108,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/places_engine.git
-  revision: eb8846aea26a77015ea391fa474d81364ef3997a
-  tag: v3.5.8
+  revision: 13062ca00995aeb8a8b1b5cfbabb346f1ed7bd47
+  tag: v3.5.9
   specs:
-    places_engine (3.5.8)
+    places_engine (3.5.9)
       rails (~> 3.2.11)
 
 GIT
@@ -332,7 +332,7 @@ DEPENDENCIES
   interface_utils (= 2.0.8)!
   jquery-rails
   json
-  kmaps_engine (= 1.9.0)!
+  kmaps_engine (= 1.9.1)!
   libv8 (= 3.3.10.2)
   makandra_resource_controller
   memcache-client
@@ -342,7 +342,7 @@ DEPENDENCIES
   open_id_authentication
   passiverecord (= 0.2)!
   pg
-  places_engine (= 3.5.8)!
+  places_engine (= 3.5.9)!
   places_integration (= 2.0.6)!
   proxy_engine (= 2.0.2)!
   rack-openid
