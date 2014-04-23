@@ -19,10 +19,10 @@ GIT
 
 GIT
   remote: git://github.com/shanti-uva/kmaps_engine.git
-  revision: 0c9a3db8c9c31b85cd8cde04a2a745eb47aebfea
-  tag: v2.1.0
+  revision: 524a623ff139effb9da25b385ed2862e06fef98a
+  tag: v2.1.1
   specs:
-    kmaps_engine (2.1.0)
+    kmaps_engine (2.1.1)
       rails (~> 3.2.13)
 
 GIT
@@ -84,18 +84,18 @@ GIT
 
 GIT
   remote: git://github.com/thl/dictionary_integration.git
-  revision: 36e31e2b8bed8d327486f20020855f72c898b1dc
-  tag: v2.1.0
+  revision: 9a08358293056d55f80e617948d874cfa0f29c15
+  tag: v2.1.1
   specs:
-    dictionary_integration (2.1.0)
+    dictionary_integration (2.1.1)
       rails (~> 3.2.9)
 
 GIT
   remote: git://github.com/thl/interface_utils.git
-  revision: fcd188e442c8c72f5f931396be5c8bcaa7341d73
-  tag: v2.1.2
+  revision: fa4d30fa04e7120cce1c117eb54797aa7f0b3992
+  tag: v2.1.3
   specs:
-    interface_utils (2.1.2)
+    interface_utils (2.1.3)
       rails (~> 3.2.11)
 
 GIT
@@ -108,10 +108,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/places_engine.git
-  revision: ff9115d03e4e15db12a1795e19bc8625f487ba87
-  tag: v3.7.2
+  revision: ef3fdf5f2b8d68eb1ec7f7cc32a39ba9d41b0df2
+  tag: v3.7.4
   specs:
-    places_engine (3.7.2)
+    places_engine (3.7.4)
       rails (~> 3.2.11)
 
 GIT
@@ -132,10 +132,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/thl_integration.git
-  revision: 2e227bf7cc90bdedf923c8397bc4e29269c3a469
-  tag: v2.2.0
+  revision: 93db693d51d39edfa7c7f230b590b96a55d05f83
+  tag: v2.2.1
   specs:
-    thl_integration (2.2.0)
+    thl_integration (2.2.1)
       rails (~> 3.2.8)
 
 GIT
@@ -291,14 +291,14 @@ DEPENDENCIES
   complex_dates (= 2.1.0)!
   complex_scripts (= 2.2.2)!
   debugger
-  dictionary_integration (= 2.1.0)!
+  dictionary_integration (= 2.1.1)!
   dynamic_form
   exception_notification
   georuby
   hpricot
-  interface_utils (= 2.1.2)!
+  interface_utils (= 2.1.3)!
   jquery-rails
-  kmaps_engine (= 2.1.0)!
+  kmaps_engine (= 2.1.1)!
   libv8
   makandra_resource_controller
   memcache-client
@@ -307,7 +307,7 @@ DEPENDENCIES
   open_id_authentication
   passiverecord (= 0.2)!
   pg
-  places_engine (= 3.7.2)!
+  places_engine (= 3.7.4)!
   places_integration (= 2.1.0)!
   proxy_engine (= 2.1.0)!
   rack-openid
@@ -318,7 +318,7 @@ DEPENDENCIES
   spawn (= 1.0.1)!
   subjects_integration (= 0.1.0)!
   therubyracer
-  thl_integration (= 2.2.0)!
+  thl_integration (= 2.2.1)!
   tinymce-rails (= 3.5.9)
   uglifier
   universal_navigation (= 2.1.0)!
