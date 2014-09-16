@@ -65,7 +65,7 @@ gem 'acts_as_family_tree',        '1.1.3',        :github => 'thl/acts_as_family
 gem 'authenticated_system',       '2.2.8',        :github => 'thl/authenticated_system',        :tag => 'v2.2.8' #:path => '../engines/authenticated_system'
 gem 'complex_dates',              '2.1.3',        :github => 'thl/complex_dates',               :tag => 'v2.1.3' #:path => '../engines/complex_dates'
 gem 'complex_scripts',            '2.2.6',        :github => 'thl/complex_scripts',             :tag => 'v2.2.6' #:path => '../engines/complex_scripts'
-gem 'dictionary_integration',     '2.1.2',        :path => '../engines/dictionary_integration' #:github => 'thl/dictionary_integration',      :tag => 'v2.1.2'
+gem 'dictionary_integration',     '2.1.2',        :github => 'thl/dictionary_integration',      :tag => 'v2.1.2' #:path => '../engines/dictionary_integration'
 gem 'interface_utils',            '2.1.6',        :github => 'thl/interface_utils',             :tag => 'v2.1.6' #:path => '../engines/interface_utils'
 gem 'mms_integration',            '2.2.3',        :github => 'thl/mms_integration',             :tag => 'v2.2.3' #:path => '../engines/mms_integration'
 gem 'kmaps_engine',               '2.3.5',        :github => 'shanti-uva/kmaps_engine',         :tag => 'v2.3.5' #:path => '../../shanti/engines/kmaps_engine'
@@ -73,7 +73,7 @@ gem 'places_integration',         '2.1.3',        :github => 'thl/places_integra
 gem 'places_engine',              '3.8.2',        :github => 'thl/places_engine',               :tag => 'v3.8.2' #:path => '../engines/places_engine'
 gem 'proxy_engine',               '2.1.2',        :github => 'thl/proxy_engine',                :tag => 'v2.1.2' #:path => '../engines/proxy_engine'
 gem 'subjects_integration',       '0.1.3',        :github => 'shanti-uva/subjects_integration', :tag => 'v0.1.3' #:path => '../../shanti/engines/subjects_integration'
-gem 'thl_integration',            '2.2.2',        :path => '../engines/thl_integration' #:github => 'thl/thl_integration',             :tag => 'v2.2.2'
+gem 'thl_integration',            '2.2.2',        :github => 'thl/thl_integration',             :tag => 'v2.2.2' #:path => '../engines/thl_integration'
 # gem 'topical_map_integration',    '3.0.4',        :github => 'thl/topical_map_integration',    :tag => 'v3.0.4' #:path => '../engines/topical_map_integration'
 gem 'universal_navigation',       '2.1.2',        :github => 'thl/universal_navigation',        :tag => 'v2.1.2' #:path => '../engines/universal_navigation'
 
