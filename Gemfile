@@ -68,7 +68,7 @@ gem 'complex_scripts',            '2.2.6',        :github => 'thl/complex_script
 gem 'dictionary_integration',     '2.1.2',        :github => 'thl/dictionary_integration',      :tag => 'v2.1.2' #:path => '../engines/dictionary_integration'
 gem 'interface_utils',            '2.1.6',        :github => 'thl/interface_utils',             :tag => 'v2.1.6' #:path => '../engines/interface_utils'
 gem 'mms_integration',            '2.2.3',        :github => 'thl/mms_integration',             :tag => 'v2.2.3' #:path => '../engines/mms_integration'
-gem 'kmaps_engine',               '2.3.5',        :github => 'shanti-uva/kmaps_engine',         :tag => 'v2.3.5' #:path => '../../shanti/engines/kmaps_engine'
+gem 'kmaps_engine',               '2.3.6',        :github => 'shanti-uva/kmaps_engine',         :tag => 'v2.3.6' #:path => '../../shanti/engines/kmaps_engine'
 gem 'places_integration',         '2.1.3',        :github => 'thl/places_integration',          :tag => 'v2.1.3' #:path => '../engines/places_integration'
 gem 'places_engine',              '3.8.2',        :github => 'thl/places_engine',               :tag => 'v3.8.2' #:path => '../engines/places_engine'
 gem 'proxy_engine',               '2.1.2',        :github => 'thl/proxy_engine',                :tag => 'v2.1.2' #:path => '../engines/proxy_engine'
