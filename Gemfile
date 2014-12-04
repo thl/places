@@ -62,7 +62,7 @@ gem 'restful-authentication',     '2.0.0.beta1',  :github => 'raszi/restful-auth
 
 gem 'active_resource_extensions', '2.1.4',        :github => 'thl/active_resource_extensions',  :tag => 'v2.1.4' #:path => '../engines/active_resource_extensions'
 gem 'acts_as_family_tree',        '1.1.3',        :github => 'thl/acts_as_family_tree',         :tag => 'v1.1.3' #:path => '../engines/acts_as_family_tree'
-gem 'authenticated_system',       '2.2.9',        :github => 'thl/authenticated_system',        :tag => 'v2.2.9' #:path => '../engines/authenticated_system'
+gem 'authenticated_system',       '2.3.0',        :github => 'thl/authenticated_system',        :tag => 'v2.3.0' #:path => '../engines/authenticated_system'
 gem 'complex_dates',              '2.1.3',        :github => 'thl/complex_dates',               :tag => 'v2.1.3' #:path => '../engines/complex_dates'
 gem 'complex_scripts',            '2.2.6',        :github => 'thl/complex_scripts',             :tag => 'v2.2.6' #:path => '../engines/complex_scripts'
 gem 'dictionary_integration',     '2.1.2',        :github => 'thl/dictionary_integration',      :tag => 'v2.1.2' #:path => '../engines/dictionary_integration'
