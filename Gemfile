@@ -70,7 +70,7 @@ gem 'interface_utils',            '2.1.7',        :github => 'thl/interface_util
 gem 'mms_integration',            '2.2.3',        :github => 'thl/mms_integration',             :tag => 'v2.2.3' #:path => '../engines/mms_integration'
 gem 'kmaps_engine',               '2.3.8',        :github => 'shanti-uva/kmaps_engine',         :tag => 'v2.3.8' #:path => '../../shanti/engines/kmaps_engine'
 gem 'places_integration',         '2.1.3',        :github => 'thl/places_integration',          :tag => 'v2.1.3' #:path => '../engines/places_integration'
-gem 'places_engine',              '3.8.3',        :github => 'thl/places_engine',               :tag => 'v3.8.3' #:path => '../engines/places_engine'
+gem 'places_engine',              '3.9.2',        :github => 'thl/places_engine',               :tag => 'v3.9.2' #:path => '../engines/places_engine'
 gem 'proxy_engine',               '2.1.2',        :github => 'thl/proxy_engine',                :tag => 'v2.1.2' #:path => '../engines/proxy_engine'
 gem 'subjects_integration',       '0.1.3',        :github => 'shanti-uva/subjects_integration', :tag => 'v0.1.3' #:path => '../../shanti/engines/subjects_integration'
 gem 'thl_integration',            '2.2.2',        :github => 'thl/thl_integration',             :tag => 'v2.2.2' #:path => '../engines/thl_integration'
