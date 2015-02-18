@@ -21,5 +21,8 @@ module Places
     # config.i18n.default_locale = :de
     config.active_record.whitelist_attributes = false
     config.active_record.schema_format = :sql
+    config.action_dispatch.default_headers = {
+        'X-Frame-Options' => ''
+    }
   end
 end
