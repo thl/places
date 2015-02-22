@@ -73,7 +73,7 @@ gem 'places_integration',         '2.1.3',        :github => 'thl/places_integra
 gem 'places_engine',              '3.9.3',        :github => 'thl/places_engine',               :tag => 'v3.9.3' #:path => '../../../thl-legacy/thl/engines/places_engine'
 gem 'proxy_engine',               '2.1.2',        :github => 'thl/proxy_engine',                :tag => 'v2.1.2' #:path => '../engines/proxy_engine'
 gem 'subjects_integration',       '0.1.3',        :github => 'shanti-uva/subjects_integration', :tag => 'v0.1.3' #:path => '../../shanti/engines/subjects_integration'
-gem 'thl_integration',            '2.2.2',        :github => 'thl/thl_integration',             :tag => 'v2.2.2' #:path => '../engines/thl_integration'
+gem 'thl_integration',            '2.2.3',        :github => 'thl/thl_integration',             :tag => 'v2.2.3' #:path => '../engines/thl_integration'
 # gem 'topical_map_integration',    '3.0.4',        :github => 'thl/topical_map_integration',    :tag => 'v3.0.4' #:path => '../engines/topical_map_integration'
 gem 'universal_navigation',       '2.1.2',        :github => 'thl/universal_navigation',        :tag => 'v2.1.2' #:path => '../engines/universal_navigation'
 
