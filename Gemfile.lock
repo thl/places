@@ -54,10 +54,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/complex_dates.git
-  revision: 8c9b02a6efc4739f16371cc964a132ce624ae39a
-  tag: v2.1.3
+  revision: 92b6613e89187b53bd454f3b96d33a2f60b11e4c
+  tag: v2.1.4
   specs:
-    complex_dates (2.1.3)
+    complex_dates (2.1.4)
       rails (~> 4.0)
 
 GIT
@@ -79,10 +79,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/interface_utils.git
-  revision: f4f4b60c9dadd4bc439fec39961571d72df6d940
-  tag: v2.1.7
+  revision: 9b4deb0ba27d31d78735ac5ff9308598e0ba4e7a
+  tag: v2.1.9
   specs:
-    interface_utils (2.1.7)
+    interface_utils (2.1.9)
       rails (~> 4.0)
 
 GIT
@@ -302,13 +302,13 @@ DEPENDENCIES
   authenticated_system (= 2.3.0)!
   byebug
   coffee-rails (~> 4.0.0)
-  complex_dates (= 2.1.3)!
+  complex_dates (= 2.1.4)!
   complex_scripts (= 2.2.6)!
   dictionary_integration (= 2.1.2)!
   dynamic_form
   exception_notification
   hpricot
-  interface_utils (= 2.1.7)!
+  interface_utils (= 2.1.9)!
   jbuilder (~> 2.0)
   jquery-rails
   kmaps_engine (= 2.3.8)!
